@@ -1,0 +1,10 @@
+.venv/
+.git/
+.claude/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.db
+.env
+agent/nlu/model.joblib
+Kisan Claim Mitra Mockup.html

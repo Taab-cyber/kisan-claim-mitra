@@ -34,6 +34,7 @@ Planner states: COLLECT -> FETCH -> DECIDE -> (PROPOSE -> AWAIT_APPROVAL -> EXEC
 6. **Deploy + docs** — Dockerfile, `run.sh`, Hugging Face Spaces (Docker) free tier, README, demo script.
 
 Stretch (only after DoD): signup, mock OTP shown in UI, synthetic doc checks (type/size, blur via OpenCV).
+Optional later: Supabase as an extra copy of the evidence log only (off by default; SQLite stays the portal DB).
 
 ## Test cases
 | TC | App no.        | Seed                                          | Expected agent behaviour                    |
