@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Judge Console</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="console">
+  <div class="row" style="align-items:flex-end;flex-wrap:wrap">
+    <div>
+      <div class="label" style="color:var(--green)">Judge / developer console</div>
+      <div style="font-size:24px;font-weight:700">Evidence log and test runner</div>
+      <a href="/" class="small">← Farmer app</a>
+    </div>
+    <div class="controls">
+      <button type="button" class="btn primary" id="run-official">Run all 4 tests</button>
+      <button type="button" class="btn" id="run-failures">Run failure cases</button>
+    </div>
+  </div>
+  <div class="card warn" style="font-size:12.5px">Every row is filled by a <b>real run</b> against the mock portal; any failure is shown, never hidden.
+    Running tests <b>resets</b> the mock portal to its seed data.</div>
+
+  <div class="table" id="results" aria-live="polite"></div>
+
+  <div class="grid2 split">
+    <div class="card"><div class="label" id="tl-title">Action timeline</div><div class="timeline" id="timeline"><span class="small">Click a row after a run.</span></div></div>
+    <div class="card"><div class="label">Checks (vs. fresh portal read)</div><div id="checks" style="font-size:12.5px"><span class="small">—</span></div></div>
+  </div>
+  <div class="card"><div class="label">Full evidence record (selected case)</div><pre class="evidence" id="evidence">—</pre></div>
+
+  <div class="card">
+    <div class="label">Mock portal controls (for live demos)</div>
+    <div class="controls" style="margin-top:8px">
+      <label for="mode" class="small">Portal mode</label>
+      <select id="mode">
+        <option value="normal">normal</option><option value="down">down (503)</option>
+        <option value="slow">slow (all calls)</option><option value="slow_writes">slow_writes (timeouts)</option>
+        <option value="drop_writes">drop_writes (verification fails)</option>
+      </select>
+      <button type="button" class="btn" id="set-mode">Apply mode</button>
+      <button type="button" class="btn" id="credit">Simulate credit for TC4</button>
+      <button type="button" class="btn" id="reset">Reset portal</button>
+      <span class="small" id="mode-now"></span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="row"><div class="label">Live evidence log (farmer sessions)</div>
+      <div class="controls"><input id="sid" placeholder="filter by session id" style="min-height:44px;border-radius:12px;border:2px solid var(--line);padding:0 10px">
+      <button type="button" class="btn" id="refresh">Refresh</button></div></div>
+    <pre class="evidence" id="live" style="margin-top:8px">—</pre>
+  </div>
+  <div class="row small"><span>Secrets and unneeded personal data are never logged (keys like api_key / otp are redacted).</span>
+    <b style="color:var(--green-dark)" id="summary"></b></div>
+</main>
+<script src="console.js"></script>
+</body>
+</html>

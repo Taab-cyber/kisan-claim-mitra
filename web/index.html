@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kisan Claim Mitra</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="phone">
+
+<!-- 1. Welcome and language -->
+<section id="screen-lang" class="screen">
+  <div class="row">
+    <div class="brand">
+      <div class="logo"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 22V8"/><path d="M12 8c0-3 2-5 4-5 0 3-1 5-4 5Z"/><path d="M12 8c0-3-2-5-4-5 0 3 1 5 4 5Z"/><path d="M12 14c0-3 2-5 4-5 0 3-1 5-4 5Z"/><path d="M12 14c0-3-2-5-4-5 0 3 1 5 4 5Z"/></svg></div>
+      <div><div class="brand-name">किसान क्लेम मित्र</div><div class="small">Kisan Claim Mitra</div></div>
+    </div>
+    <div class="small" style="text-align:right">Demo<br><b style="color:var(--ink)">Synthetic data only</b></div>
+  </div>
+  <div class="guide">
+    <div class="row" style="justify-content:flex-start">
+      <div class="speaker"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#12261A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></div>
+      <div class="eyebrow">आवाज़ सहायक · Voice guide</div>
+    </div>
+    <div class="guide-text" style="font-size:22px">नमस्ते! मैं आपकी फसल बीमा सहायक हूँ। पहले अपनी भाषा चुनिए।</div>
+    <div class="guide-sub">Hello! I am your crop insurance helper. First, please choose your language.</div>
+    <div class="bars" aria-hidden="true"><i style="height:8px"></i><i style="height:16px"></i><i style="height:22px"></i><i style="height:12px"></i><i style="height:18px"></i><i style="height:8px"></i></div>
+  </div>
+  <div style="font-weight:600">भाषा चुनें · Choose language</div>
+  <div class="grid2">
+    <button type="button" class="lang-btn" data-lang="hi" aria-pressed="true">हिन्दी</button>
+    <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">English</button>
+  </div>
+  <div class="small">भाषा कभी भी ऊपर से बदली जा सकती है · You can change language any time</div>
+  <button type="button" id="start" class="btn primary" style="min-height:60px;font-size:17px">शुरू करें · Start</button>
+  <a class="footer-link" href="console.html">Judge / developer console →</a>
+</section>
+
+<!-- 5. Farmer home -->
+<section id="screen-home" class="screen" hidden>
+  <div class="row">
+    <div><div class="small">नमस्ते · Welcome</div><div style="font-size:22px;font-weight:700">किसान साथी · Farmer</div></div>
+    <div class="toggle">
+      <button type="button" id="mute" aria-pressed="false" aria-label="Mute voice guide" title="Mute / unmute">🔊</button>
+      <button type="button" class="lang-toggle" data-lang="hi" aria-pressed="true">हिं</button>
+      <button type="button" class="lang-toggle" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+  <div class="guide center">
+    <div class="eyebrow">आवाज़ सहायक · Voice guide</div>
+    <div class="guide-text" id="guide-text">बटन दबाकर बोलिए: "मेरे क्लेम का स्टेटस बताओ"</div>
+    <div class="guide-sub" id="guide-sub">Press the mic and speak: "Tell me my claim status"</div>
+    <button type="button" id="mic" class="mic" aria-label="Press to speak · बोलने के लिए दबाएँ">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#1E6B43" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0"/><path d="M12 17v5"/></svg>
+    </button>
+    <div class="guide-sub" id="mic-status">दबाएँ और बोलें · Tap and speak</div>
+  </div>
+  <form class="ask" id="ask">
+    <label for="text" class="sr-only">Type your question</label>
+    <input id="text" type="text" autocomplete="off" maxlength="500" placeholder="या यहाँ लिखिए · Or type here">
+    <button type="submit" class="send" aria-label="Send · भेजें"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4Z"/></svg></button>
+  </form>
+  <div style="font-size:14px;font-weight:700">जल्दी चुनें · Quick options</div>
+  <div class="grid2">
+    <button type="button" class="quick" data-say="status"><b>क्लेम स्टेटस</b><span>Check claim status</span></button>
+    <button type="button" class="quick" id="fix-btn"><b>सुधार करें</b><span>Fix season or document</span></button>
+    <button type="button" class="quick" data-say="apply"><b>नया बीमा आवेदन</b><span>Apply for insurance</span></button>
+    <button type="button" class="quick gold" data-say="help"><b>मदद बुक करें</b><span>Book help or call</span></button>
+  </div>
+  <div class="grid2" id="fix-choices" hidden>
+    <button type="button" class="quick" data-say="season"><b>सीज़न सही करें</b><span>Fix season</span></button>
+    <button type="button" class="quick" data-say="upload"><b>दस्तावेज़ अपलोड</b><span>Upload document</span></button>
+  </div>
+  <div class="card">
+    <div class="label">बातचीत · Conversation</div>
+    <div class="log" id="log" aria-live="polite"></div>
+  </div>
+  <a class="footer-link" href="console.html">Judge / developer console →</a>
+</section>
+
+<!-- 6. Claim status -->
+<section id="screen-status" class="screen" hidden>
+  <div class="row">
+    <button type="button" class="icon-btn back" aria-label="Back · वापस">←</button>
+    <div class="title">क्लेम स्टेटस · Claim status</div><div style="width:44px"></div>
+  </div>
+  <div class="card grid3" id="st-meta"></div>
+  <div class="guide"><div class="guide-text" style="font-size:15px" id="st-summary"></div></div>
+  <div class="grid2">
+    <div class="card" id="st-decision"></div>
+    <div class="card" id="st-payment"></div>
+  </div>
+  <div class="small">मैं तब तक "भुगतान हो गया" नहीं कहूँगा जब तक पोर्टल पर क्रेडिट न दिखे · I will not say "paid" until the portal shows the credit.</div>
+  <div class="card unsure" id="st-uncertain" hidden></div>
+  <div class="card bad" id="st-missing" hidden>
+    <div class="label">Missing document · portal name, exact</div>
+    <div class="big" id="st-doc"></div>
+    <div style="font-size:12.5px">नाम सीधे पोर्टल से लिया गया है · Name copied from the portal; nothing invented.</div>
+    <button type="button" class="btn primary" id="st-upload" style="width:100%;margin-top:8px;min-height:48px">अपलोड करें · Upload it</button>
+  </div>
+  <div class="card">
+    <div class="label">Evidence · मेरी जानकारी का स्रोत</div>
+    <div style="font-size:12.5px;line-height:1.6" id="st-evidence"></div>
+  </div>
+  <div class="grid2">
+    <button type="button" class="btn hear">फिर सुनें · Hear again</button>
+    <button type="button" class="btn gold" id="st-recheck">दोबारा जाँचें · Recheck</button>
+  </div>
+</section>
+
+<!-- 7. Approval gate -->
+<section id="screen-approval" class="screen" hidden>
+  <div class="row">
+    <button type="button" class="icon-btn back" aria-label="Back · वापस">←</button>
+    <div class="title">आपकी मंज़ूरी चाहिए · Your approval</div><div style="width:44px"></div>
+  </div>
+  <div class="guide"><div class="guide-text" style="font-size:15px" id="ap-summary"></div></div>
+  <div class="grid2" id="ap-compare"></div>
+  <div class="card" style="border:3px solid var(--green)">
+    <div class="label" style="color:var(--green)" id="ap-state">Proposed change · not done yet</div>
+    <dl class="kv" id="ap-details"></dl>
+    <div class="small" style="border-top:1px solid #DDE5DF;padding-top:8px;margin-top:8px">अस्वीकार करने पर कुछ नहीं बदलेगा · Reject = no change. If the record changes before you approve, this proposal expires.</div>
+  </div>
+  <div class="card dashed" id="ap-after">
+    <div class="label">After you approve</div>
+    <div style="font-size:12.5px;line-height:1.6">1. Run once only (duplicate-safe)<br>2. Re-read the portal separately<br>3. Say "done" only if the portal shows the change</div>
+  </div>
+  <div class="card" id="ap-result" hidden></div>
+  <div class="grid2" id="ap-buttons">
+    <button type="button" class="btn danger" id="ap-reject" style="min-height:60px">मना करें · Reject</button>
+    <button type="button" class="btn primary" id="ap-approve" style="min-height:60px">मंज़ूर · Approve</button>
+  </div>
+  <div class="grid2" id="ap-done" hidden>
+    <button type="button" class="btn hear">फिर सुनें · Hear again</button>
+    <button type="button" class="btn primary back">होम · Home</button>
+  </div>
+</section>
+</main>
+<div class="notice" id="notice" role="status" hidden></div>
+<script src="voice.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

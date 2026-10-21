@@ -13,6 +13,10 @@ from agent.approvals import ActionRunner, ApprovalError, ApprovalStore
 from agent.evidence import EvidenceLog
 from agent.nlu.predict import predict
 
+class UnknownSession(Exception):
+    """The session id does not exist (expired server restart or a typo)."""
+
+
 CLAIM_INTENTS = {"check_status", "missing_docs", "correct_season", "upload_doc"}
 
 
@@ -37,7 +41,7 @@ class Agent:
 
     def _session(self, sid, lang=None):
         if sid not in self.sessions:
-            raise KeyError("unknown session")
+            raise UnknownSession(sid)
         s = self.sessions[sid]
         if lang in ("en", "hi"):
             s["lang"] = lang
