@@ -8,6 +8,7 @@ Failure simulation ("mode"), set by env PORTAL_MODE or POST /admin/mode:
   down         - every claim endpoint returns 503 "portal_down"
   slow         - responses are delayed PORTAL_SLOW_SECONDS (writes ARE applied first,
                  like a real server that finished the work but answered too late)
+  slow_writes  - like slow, but only for writes (reads stay fast)
   drop_writes  - writes answer "ok" but are NOT saved (lets us test verification failure)
 """
 import asyncio
@@ -22,7 +23,7 @@ from pydantic import BaseModel
 
 from portal import db
 
-MODES = ("normal", "down", "slow", "drop_writes")
+MODES = ("normal", "down", "slow", "slow_writes", "drop_writes")
 STATE = {
     "mode": os.getenv("PORTAL_MODE", "normal"),
     "slow_seconds": float(os.getenv("PORTAL_SLOW_SECONDS", "3")),
@@ -145,7 +146,7 @@ async def change_season(app_no: str, req: SeasonChange):
               "requested_season": req.season, "record_version": after["record_version"]}
     if req.idempotency_key:
         db.save_idempotent(req.idempotency_key, result)
-    if STATE["mode"] == "slow":
+    if STATE["mode"] in ("slow", "slow_writes"):
         await asyncio.sleep(STATE["slow_seconds"])  # work done, answer arrives late
     return result
 
@@ -177,7 +178,7 @@ async def upload_document(app_no: str, req: DocumentUpload):
               "document_name": req.document_name, "record_version": after["record_version"]}
     if req.idempotency_key:
         db.save_idempotent(req.idempotency_key, result)
-    if STATE["mode"] == "slow":
+    if STATE["mode"] in ("slow", "slow_writes"):
         await asyncio.sleep(STATE["slow_seconds"])
     return result
 
