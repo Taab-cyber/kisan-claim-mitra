@@ -20,6 +20,7 @@ from agent.approvals import ApprovalError
 from agent.planner import Agent, UnknownSession
 from agent.scenarios import SCENARIOS, run_all
 from agent.tools import PortalClient
+from farmer import accounts, routes as farmer_routes
 from portal import db
 from portal.app import app as portal_app
 
@@ -36,11 +37,13 @@ def configure(http):
     """Point the agent at a portal. Tests pass an in-process client here."""
     STATE["http"] = http
     STATE["agent"] = Agent(PortalClient(http))
+    farmer_routes.EVIDENCE["log"] = STATE["agent"].evidence   # one shared evidence log
 
 
 @asynccontextmanager
 async def lifespan(app):
     db.init_db(os.getenv("PORTAL_DB"))      # mounted apps don't run their own startup
+    accounts.init_db()                      # demo farmer + synthetic sample documents
     if "agent" not in STATE:
         configure(httpx.Client(base_url=PORTAL_URL))
     yield
@@ -48,6 +51,8 @@ async def lifespan(app):
 
 app = FastAPI(title="Kisan Claim Mitra", lifespan=lifespan)
 app.mount("/portal", portal_app)
+app.include_router(farmer_routes.router)
+app.add_exception_handler(accounts.AccountError, farmer_routes.account_error_handler)
 
 
 def agent():

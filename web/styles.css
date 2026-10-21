@@ -105,3 +105,26 @@ pre.evidence { background: #F7F9F4; border-radius: 10px; padding: 10px; font-siz
 .controls select { min-height: 44px; border-radius: 12px; border: 2px solid var(--line); padding: 0 10px; background: var(--white); }
 .controls .btn { min-height: 44px; font-size: 14px; }
 @media (max-width: 700px) { .split { grid-template-columns: 1fr !important; } }
+
+/* sign-up, OTP, documents (stretch screens) */
+.steps { display: flex; gap: 6px; } .steps i { flex: 1; height: 6px; border-radius: 3px; background: var(--line); } .steps i.on { background: var(--green); }
+.field { display: flex; flex-direction: column; gap: 4px; } .field label { font-size: 13px; font-weight: 600; }
+.input { min-height: 50px; border-radius: 14px; border: 2px solid var(--line); background: var(--white); padding: 0 12px; width: 100%; }
+.field-error input, .field-error .input { border-color: var(--red); background: var(--red-soft); }
+.gold-card { background: var(--amber-soft); border: 2px solid var(--marigold); }
+.otp-boxes { border: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px; }
+.otp-boxes legend { margin-bottom: 6px; }
+.otp-boxes input { min-height: 56px; width: 100%; text-align: center; font-size: 24px; font-weight: 700; border-radius: 12px; border: 2px solid var(--line); background: var(--white); }
+.otp-boxes:disabled input { background: #EEF1EC; }
+.attention { text-align: left; font-size: 13px; width: 100%; color: var(--ink); }
+.doc-row { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 10px; align-items: start; }
+.doc-row.flag { background: var(--red-soft); border: 3px solid var(--red); }
+.thumb { width: 64px; height: 46px; object-fit: cover; border-radius: 8px; border: 1px solid var(--line); background: var(--white); }
+.doc-actions { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.doc-actions .btn, .doc-actions select { min-height: 44px; font-size: 13px; padding: 4px 10px; border-radius: 12px; }
+.doc-actions select { border: 2px solid var(--line); background: var(--white); max-width: 100%; }
+.chip.REVIEW { background: var(--amber-soft); color: var(--amber-ink); }
+.chip.MISSING, .chip.NEEDS_FIX { background: var(--red-soft); color: var(--red-ink); }
+.chip.PASSED { background: var(--green-soft); color: var(--green-dark); }
+.stack { display: flex; flex-direction: column; gap: 10px; }
+a.btn { text-decoration: none; }

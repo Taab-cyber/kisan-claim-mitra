@@ -33,20 +33,86 @@
     <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">English</button>
   </div>
   <div class="small">भाषा कभी भी ऊपर से बदली जा सकती है · You can change language any time</div>
-  <button type="button" id="start" class="btn primary" style="min-height:60px;font-size:17px">शुरू करें · Start</button>
+  <button type="button" id="go-signup" class="btn primary" style="min-height:60px;font-size:17px">नया खाता बनाएँ · Create account</button>
+  <button type="button" id="go-login" class="btn">लॉगिन · Log in with OTP</button>
+  <button type="button" id="start" class="btn" style="border-style:dashed">बिना लॉगिन आगे बढ़ें · Continue as guest</button>
   <a class="footer-link" href="console.html">Judge / developer console →</a>
+</section>
+
+<!-- 2. Create profile -->
+<section id="screen-signup" class="screen" hidden>
+  <div class="row">
+    <button type="button" class="icon-btn to-welcome" aria-label="Back · वापस">←</button>
+    <div class="title">चरण 1 / 3 · Step 1 of 3</div><div style="width:44px"></div>
+  </div>
+  <div class="steps" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+  <div class="guide"><div class="guide-text" style="font-size:16px">अपना नाम, मोबाइल नंबर और खेती की जानकारी बताइए।</div>
+    <div class="guide-sub">Tell me your name, mobile number and farm details. Tap the mic beside any box to speak.</div></div>
+  <form id="signup-form" class="stack" novalidate>
+    <div class="field"><label for="f-name">पूरा नाम · Full name</label><div class="ask"><input id="f-name" name="name" autocomplete="off"><button type="button" class="send" data-mic-for="f-name" aria-label="Speak full name">🎤</button></div></div>
+    <div class="field"><label for="f-mobile">मोबाइल नंबर · Mobile number (OTP will come here)</label><div class="ask"><input id="f-mobile" name="mobile" type="tel" inputmode="numeric" autocomplete="off"><button type="button" class="send" data-mic-for="f-mobile" aria-label="Speak mobile number">🎤</button></div></div>
+    <div class="grid2">
+      <div class="field"><label for="f-village">गाँव · Village</label><input id="f-village" name="village" class="input"></div>
+      <div class="field"><label for="f-district">जिला · District</label><input id="f-district" name="district" class="input"></div>
+      <div class="field"><label for="f-land">ज़मीन (एकड़) · Land (acres)</label><input id="f-land" name="land_acres" class="input" inputmode="decimal"></div>
+      <div class="field"><label for="f-crop">मुख्य फसल · Main crop</label><input id="f-crop" name="main_crop" class="input"></div>
+    </div>
+    <div class="card warn small" style="color:var(--ink)">डेमो में सिर्फ़ नकली (synthetic) जानकारी डालें · Use synthetic details only. Missing a detail? I will ask for it instead of guessing.</div>
+    <div class="card bad" id="signup-error" hidden></div>
+    <button type="submit" class="btn primary">आगे: OTP से पुष्टि · Next: verify with OTP</button>
+  </form>
+</section>
+
+<!-- 4. OTP login (mock) -->
+<section id="screen-otp" class="screen" hidden>
+  <div class="row">
+    <button type="button" class="icon-btn to-welcome" aria-label="Back · वापस">←</button>
+    <div class="title" id="otp-title">लॉगिन · Log in</div><div style="width:44px"></div>
+  </div>
+  <div class="guide"><div class="guide-text" style="font-size:16px">अपना मोबाइल नंबर डालें, फिर आए हुए 6 अंकों का OTP भरिए।</div>
+    <div class="guide-sub">Enter your mobile number, then type the 6-digit OTP. I cannot fill it for you.</div></div>
+  <div class="field"><label for="otp-mobile">मोबाइल नंबर · Mobile number</label>
+    <div class="ask"><input id="otp-mobile" type="tel" inputmode="numeric" autocomplete="off"><button type="button" class="btn primary" id="otp-send" style="min-height:50px;font-size:14px">OTP भेजें · Send</button></div>
+    <div class="small">डेमो नंबर · Demo number: 9876543210</div></div>
+  <div class="card gold-card" id="otp-sms" hidden></div>
+  <fieldset class="otp-boxes" id="otp-boxes" disabled>
+    <legend class="small">6 अंकों का OTP · 6 digit OTP</legend>
+  </fieldset>
+  <div class="row small"><span id="otp-timer"></span><button type="button" class="btn" id="otp-hint" style="min-height:44px;font-size:13px">निर्देश सुनें · Read hint</button></div>
+  <div class="card bad" id="otp-error" hidden></div>
+  <div class="card dashed small" style="color:var(--ink)">सुरक्षा: अपना OTP किसी को न बताएँ · Safety: never share your OTP. This demo never bypasses OTP; a mock code is shown as a safe manual step.</div>
+  <button type="button" class="btn primary" id="otp-verify" disabled>पुष्टि करें · Verify and log in</button>
+  <button type="button" class="btn gold" data-say="help">OTP नहीं मिला? मदद बुक करें · No OTP? Book help</button>
+</section>
+
+<!-- 3. Documents + profile -->
+<section id="screen-docs" class="screen" hidden>
+  <div class="row">
+    <button type="button" class="icon-btn back" aria-label="Back · वापस">←</button>
+    <div class="title" id="docs-title">मेरे दस्तावेज़ · My documents</div><div style="width:44px"></div>
+  </div>
+  <div class="card" id="profile-card"></div>
+  <div class="guide"><div class="guide-text" style="font-size:16px" id="docs-guide"></div>
+    <div class="guide-sub">सिर्फ़ नकली (synthetic) नमूना फ़ोटो इस्तेमाल करें · Use synthetic sample images only. Files are checked, not stored.</div></div>
+  <div id="doc-list" class="stack"></div>
+  <input type="file" id="doc-file" accept="image/jpeg,image/png,application/pdf" capture="environment" hidden>
+  <div class="grid2">
+    <button type="button" class="btn gold" data-say="help">मदद बुक करें · Book help</button>
+    <button type="button" class="btn primary back">होम · Home</button>
+  </div>
 </section>
 
 <!-- 5. Farmer home -->
 <section id="screen-home" class="screen" hidden>
   <div class="row">
-    <div><div class="small">नमस्ते · Welcome</div><div style="font-size:22px;font-weight:700">किसान साथी · Farmer</div></div>
+    <div><div class="small">नमस्ते · Welcome</div><div style="font-size:22px;font-weight:700" id="home-name">किसान साथी · Farmer</div></div>
     <div class="toggle">
       <button type="button" id="mute" aria-pressed="false" aria-label="Mute voice guide" title="Mute / unmute">🔊</button>
       <button type="button" class="lang-toggle" data-lang="hi" aria-pressed="true">हिं</button>
       <button type="button" class="lang-toggle" data-lang="en" aria-pressed="false">EN</button>
     </div>
   </div>
+  <button type="button" class="card bad attention" id="attention" hidden></button>
   <div class="guide center">
     <div class="eyebrow">आवाज़ सहायक · Voice guide</div>
     <div class="guide-text" id="guide-text">बटन दबाकर बोलिए: "मेरे क्लेम का स्टेटस बताओ"</div>
@@ -75,6 +141,10 @@
   <div class="card">
     <div class="label">बातचीत · Conversation</div>
     <div class="log" id="log" aria-live="polite"></div>
+  </div>
+  <div class="grid2" id="account-links" hidden>
+    <button type="button" class="btn" id="my-docs">मेरे दस्तावेज़ · My documents</button>
+    <button type="button" class="btn" id="logout">लॉगआउट · Log out</button>
   </div>
   <a class="footer-link" href="console.html">Judge / developer console →</a>
 </section>
@@ -140,5 +210,6 @@
 <div class="notice" id="notice" role="status" hidden></div>
 <script src="voice.js"></script>
 <script src="app.js"></script>
+<script src="account.js"></script>
 </body>
 </html>

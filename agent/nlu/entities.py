@@ -112,6 +112,12 @@ def extract_app_no(text):
     return None
 
 
+def extract_digits(text):
+    """All digits in the text, reading spoken number words too.
+    '98765 43210', 'nau aath saat...' and '९८७६५४३२१०' all give '9876543210'."""
+    return "".join(d for run in _digit_runs(normalize(text)) for d, _ in run)
+
+
 def extract_season(text):
     """Return {'season': 'Rabi 2026-27', 'year_assumed': bool} or None."""
     t = normalize(text)

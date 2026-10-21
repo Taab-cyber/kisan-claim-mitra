@@ -50,7 +50,7 @@ The SQLite data is re-seeded on every start.
 
 **Tests:**
 ```bash
-python -m pytest -q        # 89 tests: rules, NLU, agent safety, scenarios, API
+python -m pytest -q        # 106 tests: rules, NLU, agent safety, scenarios, API, signup/OTP/docs
 python run_tests.py        # TC1-TC4 + 9 failure cases -> TEST_EVIDENCE.md
 ```
 
@@ -143,7 +143,48 @@ The browser uses one small interface (`web/voice.js`): **`Voice.listen(lang)`** 
 
 ---
 
-## 5. 3-minute demo script
+## 5. Sign-up, mock OTP login and document checks
+
+Flow: **Create account → OTP login → My documents** (3 steps). There is also *Log in with OTP*,
+and *Continue as guest* for a quick demo.
+
+- **Sign-up (`/api/auth/signup`):** name, mobile, village, district, land (acres) and main crop.
+  You can speak into any field. A spoken mobile number is read back digit by digit ("…सही है?").
+  Missing details are **listed and asked for, never guessed**. The mobile number accepts spoken
+  or Devanagari digits and must be a 10-digit Indian number starting with 6-9.
+- **Mock OTP (`/api/auth/otp/*`):**
+  - **Code:** a random 6-digit code that is **shown in a yellow "Demo SMS (mock)" box**. The
+    farmer types it in themselves; the app never fills it and never bypasses OTP.
+  - **Limits:** valid for 5 minutes, single use, resend after 30 s, locked after 5 wrong tries,
+    and compared in constant time.
+  - **Evidence:** the OTP and the login token are **redacted** in the evidence log, and the
+    mobile number is masked (`98••••••10`).
+- **Document checks (`farmer/doccheck.py`, OpenCV + numpy, free):**
+
+  | Check | Rule |
+  |---|---|
+  | File type | `.jpg/.jpeg/.png/.pdf` **and** the file's real bytes must match (a PDF renamed `.png` is caught) |
+  | Size | 200 bytes - 2 MB |
+  | Resolution | at least 600 × 400 px |
+  | Blur | variance of the Laplacian below 100 = blurry (clear samples score about 3,300+, the blurry sample 1.4) |
+  | Light | mean brightness below 60 = too dark |
+
+  Results: **PASSED** (quality only, not proof the document is genuine), **NEEDS_FIX** (retake),
+  **REVIEW** (a PDF: accepted, but its content needs an officer), or **MISSING**.
+- **Profile:** flagged documents are **highlighted in red** on *My documents*, and the home screen
+  shows the "N documents need attention" banner from the mockup.
+- **Synthetic samples (`farmer/samples.py` → `web/samples/`):** generated documents stamped
+  "SYNTHETIC SAMPLE - NOT A REAL DOCUMENT". The set includes clear ones plus a blurry, a dark, a
+  tiny one, and a PDF, so every check can be demonstrated. Each row has a **🧪 Demo file**
+  picker that uploads a sample through the real upload path.
+- **Demo farmer:** mobile **9876543210**. Its seeded documents match the mockup: Aadhaar passed,
+  PAN under review, land record missing, passbook blurry, insurance passed.
+- **Privacy:** uploaded files are **not stored**; only the file name, size and check results are
+  kept. We never ask for Aadhaar, PAN or bank numbers.
+
+---
+
+## 6. 3-minute demo script
 
 Start at `/`, choose **हिन्दी**, and press **Start**. Keep `/console.html` open in a second tab.
 
@@ -155,11 +196,12 @@ Start at `/`, choose **हिन्दी**, and press **Start**. Keep `/console
 | 1:30 | **TC3:** say *"mera rabi 2026-27 ka claim KRB-2026-00633 ka status batao"* | "You asked Rabi 2026-27 / Portal shows Kharif 2026". Say **"haan kar do"** and it is VERIFIED by a fresh read. (The double-click case is shown in the console as **F5**.) |
 | 2:00 | **TC4:** switch to EN and type *"has my money come for KRB-2026-00748"* | **Approved** (green) and **Not credited** (amber) cards: "Approved does not mean paid". In the console, press **Simulate credit** and ask again: now it says paid. |
 | 2:25 | **Console:** press **Run all 4 tests**, then **Run failure cases** | 13 real runs. Click **F6** to see the timeout, the portal checked before any retry, and a single write. Click **F7** to see `drop_writes` caught as **FAILED**. Show the live evidence log. |
+| (extra) | Welcome → **Log in with OTP** → 9876543210 → type the code from the Demo SMS. Tap the red banner, then upload **Bank passbook - BLURRY** from 🧪 Demo file, then the clear one. | OTP typed by the farmer; blurry photo flagged NEEDS_FIX, then fixed to PASSED |
 | 2:50 | Close | Approval is enforced by the server, no duplicate actions, approved is never confused with paid, UNCERTAIN instead of guessing. |
 
 ---
 
-## 6. Simplifying choices and assumptions
+## 7. Simplifying choices and assumptions
 
 - The portal and agent run in **one process** (portal mounted at `/portal`). The agent still
   calls it over **HTTP**, like an external system.
@@ -178,8 +220,11 @@ Start at `/`, choose **हिन्दी**, and press **Start**. Keep `/console
 - **No web fonts are downloaded** (no runtime network calls). Noto Sans or Nirmala UI are used
   if installed.
 - Running tests from the judge console **resets the mock portal** to its seed data.
+- **Step order differs from the mockup:** the mockup shows documents before OTP login. We verify
+  the mobile number with OTP **first**, so documents are only accepted from a verified account.
+- Accounts and document results use their own in-memory SQLite DB, re-seeded at startup.
 
-## 7. Limitations (honest)
+## 8. Limitations (honest)
 
 - The NLU is a small template-trained model. Unusual phrasings can fail (see the miss above);
   when confidence is low it asks again rather than guessing.
@@ -187,18 +232,22 @@ Start at `/`, choose **हिन्दी**, and press **Start**. Keep `/console
   may sound robotic, or be missing on some systems (the text is always shown).
 - Sessions, proposals and the evidence log live **in memory**, so they reset when the server
   restarts. `TEST_EVIDENCE.md` is the saved record.
-- The server is single-instance, with no login. The mock OTP, sign-up and document-quality
-  checks in the mockup are **stretch goals and not built yet**.
+- The server is single-instance. Accounts and logins reset on restart. The claim agent does not
+  yet use the farmer's uploaded profile documents (it uploads a synthetic sample reference to
+  the portal).
+- Document checks are image-quality heuristics (type, size, resolution, blur, light). They do not
+  read the text (no OCR) and cannot detect forgery.
 - The VerbX voice adapter is a stub until its API docs are provided.
 
-## 8. Repo layout
+## 9. Repo layout
 
 ```
 portal/      mock insurance portal (FastAPI, SQLite, seed data, failure modes)
+farmer/      accounts (signup, mock OTP, profile), doccheck (OpenCV), samples, routes
 agent/       nlu/ (gen_data, train, entities, predict), tools, planner, rules,
              approvals, verify, evidence, replies, scenarios, voice
-web/         index.html, app.js, voice.js, styles.css, console.html, console.js
-tests/       pytest: portal, nlu, rules, agent safety, scenarios, api
+web/         index.html, app.js, account.js, voice.js, styles.css, console.*, samples/
+tests/       pytest: portal, nlu, rules, agent safety, scenarios, api, farmer
 server.py    main app       run_tests.py -> TEST_EVIDENCE.md
 PLAN.md      plan           Dockerfile, run.sh
 ```
