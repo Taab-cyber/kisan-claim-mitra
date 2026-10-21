@@ -1,0 +1,31 @@
+text,intent
+mera bima claim abhi kis stage pe hai,check_status
+can you tell me if my claim got approved,check_status
+पैसा खाते में आया या नहीं,check_status
+KRB-2026-00417 ka status,check_status
+claim ka kya hua bhai,check_status
+which paper is still pending for my claim,missing_docs
+कौन सा कागज़ अभी भी चाहिए,missing_docs
+kya koi document kam hai,missing_docs
+my season is written wrong please make it rabi,correct_season
+रिकॉर्ड में खरीफ लिखा है पर फसल रबी की थी,correct_season
+season rabi 2026-27 kar dijiye,correct_season
+i want to send my khatauni now,upload_doc
+खतौनी अपलोड करनी है,upload_doc
+document bhejna hai,upload_doc
+how can i get insurance for my wheat,apply_insurance
+गेहूं का बीमा कैसे करवाएं,apply_insurance
+please connect me to a helpline officer,book_help
+मुझे किसी से बात करनी है,book_help
+haan ji kar dijiye,approve
+yes do it,approve
+जी हाँ ठीक है,approve
+nahi mat badlo,reject
+no leave it,reject
+नहीं रहने दो,reject
+can you say it again,repeat
+फिर से बताइए,repeat
+namaste bhaiya,greet
+hello good morning,greet
+what is the score of the match,unknown
+मुझे गाना सुनाओ,unknown

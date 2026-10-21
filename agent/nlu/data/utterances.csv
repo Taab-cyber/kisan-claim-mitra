@@ -1,0 +1,2036 @@
+text,intent
+stop,reject
+सीीज़न गलत है रबी 2026-27 होना चाहिए,correct_season
+mat karo,reject
+मुझे कॉल करवाइए,book_help
+सुप्रभात please,greet
+जी मेरीबीमा राशि कब मिलेगी na,check_status
+kaun se documents hahiye,missing_docs
+जी dcument upload karna hai,upload_doc
+ji मौसम बदलकर जायद करो,correct_season
+haan kisi insaan se baat karao,book_help
+मैच किसने जीता,unknown
+कागज़ अपलोड कर दो,upload_doc
+Bima kaisem ilega,apply_insurance
+नमस््कार jaldi,greet
+मेरा आवेदन नंबर krb 0226 92995 है,check_status
+please मंज़ूर है jaldi,approve
+Zara good evening,greet
+paisa aaya ki nahi,check_status
+umm meri fasal rabi ki thi,correct_season
+please गाना चलाओ jaldi,unknown
+tell me the missing documents,missing_docs
+ji kagaz upload kar ddo ji,upload_doc
+I want to insure  my कपास crop ji,apply_insurance
+ok do it,approve
+Talk to an officer,book_help
+जी kagaz upload kar do,upload_doc
+Tell me the missng documents,missing_docs
+Ji papers submit karne hain,upload_doc
+kya kagaz baaki hai,missing_docs
+why is my claim stuck on documents please,missing_docs
+I have the khatauni let me upload it,upload_doc
+My application number is krb 2026 64139,check_status
+haan the record has the wrong season na,correct_season
+सुनिए hi,greet
+Acha record me season galat hai,correct_season
+क्या कहा,repeat
+अरे sdf qwer,unknown
+I sany document pending,missing_docs
+Cancel karo कृपया,reject
+kharif 2026 के लिए बीमा चाहिए,apply_insurance
+mere claim me kaunsa kagaz kam hai,missing_docs
+I approve,approve
+haan kar do,approve
+बीमा में नाम लिखवाना है,apply_insurance
+i want to apply for crop insurance,apply_insurance
+I need help,book_help
+ummnahi,reject
+i want tospeak to someone,book_help
+my mustard was a रबी 2026-27 crop,correct_season
+मौसम बदकलर जायद करो,correct_season
+mere claim me kaunsa kagaz kam hai,missing_docs
+zara kisi insaan se baat karao,book_help
+अरे ए बार और बोलिए,repeat
+Payment hua kya,check_status
+अरे मैच कसिने जीता,unknown
+onc more please,repeat
+cancel it thank you,reject
+Book a train ticket,unknown
+mat karojaldi,reject
+सुनिए नमस्ते jaldi,greet
+मैच किसने जीता,unknown
+ji submit the missing document,upload_doc
+कागज़ात में क्याकमी है,missing_docs
+Haan mera number krb-2026-97154 hai status bata do,check_status
+चुटकुला सुनाओ,unknown
+mere paas document hai bhej do,upload_doc
+stop,reject
+i want to apply for crop insurance,apply_insurance
+मुझे दस्तावेज़ अपलोड करना है,upload_doc
+Umm नया बीमा करवाना है,apply_insurance
+प्याज का भाव क्या है,unknown
+document pnding kya hai bhai,missing_docs
+sahayata chahiye bhai,book_help
+jic ome again,repeat
+सही है कर दीजिए,approve
+i did not hear,repeat
+acha submit the missing document thank you,upload_doc
+अरे document pending kya hai,missing_docs
+समझ नहीं आया ji,repeat
+Document upload karna hai thnk you,upload_doc
+प्रणाम,greet
+season  badal do खरीफ,correct_season
+pyaaz ka bhav kya hai,unknown
+फिर से बोलो,repeat
+नहीं,reject
+conffirm,approve
+अरे application krb-2026-70776 ka kya hua,check_status
+Sir kisi officer se baat karni hai,book_help
+चुटकुला सुनाओ,unknown
+attachh my document,upload_doc
+My crop was sown in रबी 2026-27 not kharif,correct_season
+sir kyaa bola,repeat
+Connect me to a person,book_help
+hep book karo,book_help
+Has the payment come for my wheat crop,check_status
+Bima kaisee milega,apply_insurance
+Gaana chalao na,unknown
+new insurance application for कपास,apply_insurance
+the eason is wrong it should be रबी 2026-27,correct_season
+kya kgaaz baaki hai,missing_docs
+मेरा आवेदन नंबर KRB-2026-58990 है,check_status
+please repeat,repeat
+where is the nearest hospital,unknown
+where is my claim,check_status
+umm the season is wrong it should be रबी bhai,correct_season
+why is my laim stuck on documents jaldi,missing_docs
+what did yu say,repeat
+जी किसी अधिकारी से बात करनी है bhai,book_help
+cancel karo,reject
+book an appointment for help,book_help
+my wheat was a rabi crop na,correct_season
+खतौनी जमा करनी है bhai,upload_doc
+goo evening,greet
+season bbadal do जायद ji,correct_season
+अरे approve,approve
+राम रराम,greet
+please come again,repeat
+नमस्ते,greet
+acha fasal bima ke liye apply karna hai,apply_insurance
+Zara fasal bima ke liye appyl karna hai,apply_insurance
+mera claim status kya hai,check_status
+सुप्भरात na,greet
+आवेदन K R B 2 0 2 6 5 7 0 9 1की स्थिति बताइए,check_status
+Once more please,repeat
+stop कृपया,reject
+nmaskar,greet
+सहायता चाहिए,book_help
+sir how do i register for fasal bima thank you,apply_insurance
+Where is my claim na,check_status
+kisi officer se baat karni hai please,book_help
+Has the payment come for my सरसों crop,check_status
+bhai nahi,reject
+kagaz upload kar do na,upload_doc
+kisi insaan se baat karao,book_help
+claim kahan tak pahuncha कृपया,check_status
+Document pending kya hai,missing_docs
+biima kaise milega,apply_insurance
+सुनिए चुटकुला सुनाओ,unknown
+my mustard was a rabi crop,correct_season
+I have the papers now,upload_doc
+new insurance application for mustrad,apply_insurance
+status of application KRB-2026-59510,check_status
+राम राम,greet
+मेरे क्लेम में कौन सा कागज़ कम है,missing_docs
+Match kaun jeetaa thank you,unknown
+namaskar,greet
+hi,greet
+Kaun se documents chahiye जी,missing_docs
+सुनिए do not change anything,reject
+अरे the record has the wrong season,correct_season
+please update my season to kharif 2026,correct_season
+जी good morning,greet
+Where is my claim,check_status
+bhai bima ka paisa kab milega,check_status
+haan papers submit karne hain,upload_doc
+attach my document,upload_doc
+mere claim me kaunsa kagaz kam hai,missing_docs
+haan sahi hai thank  you,approve
+mera number KRB-2026-11104 hai status bata do,check_status
+Hllo,greet
+i want to innsure my गन्ना crop,apply_insurance
+नमस्ते,greet
+What is two plus two,unknown
+नमस्कार,greet
+Is my money credited,check_status
+जी tell me the missing documents,missing_docs
+अरे नया बीमा करवाना है,apply_insurance
+has my insurance claim been approved,check_status
+Sir no don tdo it,reject
+bima kaise milega,apply_insurance
+Ek baar aur,repeat
+umm मेरी बीमा रशाि कब मिलेगी,check_status
+i want to insure my धान crop jaldi,apply_insurance
+i want to insure my गन्ना crop,apply_insurance
+क्या मेरा पैसा आ गया,check_status
+ji is any document pending,missing_docs
+record me season galat hai,correct_season
+मौसम बदलकर rabi 2026-27 करो,correct_season
+कपास rabi me boya tha kharif nahi,correct_season
+Cancelkaro,reject
+yes jalldi,approve
+Please bima ka paisa kab milega,check_status
+दस्तावेज़ भेजना है,upload_doc
+abhi  nahi,reject
+अरे हेल्पलाइन सेे बात करनी है,book_help
+प्णाम,greet
+haa nदस्तावेज़ भेजना है,upload_doc
+Dobara batao,repeat
+status of application K R B 2 0 2 6 8 9 3 8 1 जी,check_status
+अरे mere paas document hai bhej do,upload_doc
+अरे मुझे मदद चाहिए,book_help
+गाना चलाओ,unknown
+सहायता चाहिए,book_help
+अरे मत करो,reject
+yes please,approve
+What time is it,unknown
+Insurance ke liye registratiion karna hai,apply_insurance
+haan wrong season ni my application,correct_season
+send my papers thank you,upload_doc
+kya kagaz baaki hai,missing_docs
+कागज़ अपलोड क रदो,upload_doc
+fasal bima ke liye apply karna hai,apply_insurance
+मेरे क्लेम में कौन सा कागज़ कम है,missing_docs
+not now,reject
+haan upload my land record,upload_doc
+speak again slowly,repeat
+kya bola jaldi,repeat
+कौन सा दसतावेज़ बाकी है,missing_docs
+uploaad my land record,upload_doc
+सहाायता चाहिए,book_help
+no dont do it,reject
+please ccorrect the season to kharif,correct_season
+What is the status of my claim,check_status
+मौम बदलकर zaid 2027 करो,correct_season
+repeat,repeat
+please correct the season to जायद,correct_season
+mera claim pass hua kya,check_status
+book an appointment for hhelp bhai,book_help
+hello ji जी,greet
+Stop,reject
+how do i regster for fasal bima,apply_insurance
+Sir hello ji jaldi,greet
+umm wrong season in my applicaation,correct_season
+Whih documents are missing,missing_docs
+ji okay porceed,approve
+सुनिएए cancel it bhai,reject
+haan payment hua kya,check_status
+मेरा दावा कहाँ तक पहुँचा,check_status
+hello is aanyone there,greet
+bhai सहायता चाहिए,book_help
+Ji upload the document for krb-2026-08601,upload_doc
+Pranam,greet
+corret go ahead,approve
+haan not nowna,reject
+confirm,approve
+धान जायद me boya tha kharif nahi,correct_season
+naamste ji,greet
+new insurance application for धान,apply_insurance
+कागज़ात में क्या कीम है,missing_docs
+update my season to kharif 2026 ji,correct_season
+आवेदन KRB-2026-8399 की स्थिति बताइए,check_status
+KRB-2026-17392 ke liye kya documents lagenge,missing_docs
+रद्द करो,reject
+मुझे दस्तावेज़ अपलोड करना है,upload_doc
+आज मौसम कैसा है,unknown
+नया बीमा करवाना है,apply_insurance
+season galat hai रबी 2026-27 karo,correct_season
+what papers do i need to submit,missing_docs
+क्या मेरा पैसा  गया,check_status
+what is the price of onion na,unknown
+Send my papers,upload_doc
+Land record uplad karo,upload_doc
+क्या ेमरा पैसा आ गया,check_status
+सहायता चाहिए,book_help
+haan sbmit the missing document,upload_doc
+how to apply for pmfby,apply_insurance
+Say that again,repeat
+नया बीमा ककरवाना है,apply_insurance
+Zara is any document pending,missing_docs
+नहीं,reject
+Upload my land record,upload_doc
+अरे the record has the wrong season,correct_season
+kya bola,repeat
+मुझे मदद चाहिए,book_help
+ji मेरा आवेदन ंनबर KRB-2026-32411 है,check_status
+Please where is my claim na,check_status
+अरे hello  ji jaldi,greet
+zara i want to insure my गेहूं crop,apply_insurance
+भुगतान हुआ या ननहीं,check_status
+haan did i get paid for धान,check_status
+कागज़ात में क्या कमी है,missing_docs
+bima kaise milega,apply_insurance
+जी please repeat,repeat
+KRRB-2026-46769 ke liye kya documents lagenge,missing_docs
+Ruko mat badlo,reject
+tell me aj oke,unknown
+कसी अधिकारी से बात करनी है,book_help
+What is the weather today please,unknown
+मुझे मदद चाहिए bhai,book_help
+Nahi rhne do,reject
+do i need to give any more papers जी,missing_docs
+kya bola जी,repeat
+zara मुझे मदद चाहिए na,book_help
+मेरा दावा कहाँ तक पहुँचा,check_status
+say that again,repeat
+Wrong season in my application thank you,correct_season
+what documetns are required for KRB-2026-99910,missing_docs
+kard o,approve
+gaana chalao,unknown
+claim status for KRB-2026-35804 thank you,check_status
+सीज़न गलत है kharif होन ाचाहिए,correct_season
+sir document pending kya hai jaldi,missing_docs
+राम राम,greet
+paisa aaya ki nahi,check_status
+why is my claimm stuck on documents thank you,missing_docs
+ट्रेन काट िकट बुक करो,unknown
+haan ना ककृपया,reject
+Please गन्ना का बीमा करवाना है,apply_insurance
+Tell me my claim status,check_status
+has my insurance claim been approved jaldi,check_status
+हां कर दो thank you,approve
+मैच िसने जीता,unknown
+No dont do it thank you,reject
+KRB-2026-32208 ke liye kya documents lagenge,missing_docs
+अरे ram ram,greet
+जी mera claim status kya hai,check_status
+नमस्कार na,greet
+धान का बीमा करवाना है,apply_insurance
+apply kaise karu,apply_insurance
+गन्ना का बीमा करवाना है,apply_insurance
+ek baar aur,repeat
+मिलने का समय बुक करो,book_help
+कुछ मत बदलो,reject
+kisi officer se baat karni hai thank you,book_help
+naya bima kawrana hai,apply_insurance
+ना,reject
+plese repeat ji,repeat
+ek baar aur,repeat
+bhai khatauni jama karni hai जी,upload_doc
+kagaz upload kar do,upload_doc
+I want ot speak to someone,book_help
+Help book karo,book_help
+kya kagaz baaki hai thank you,missing_docs
+once more please,repeat
+Ji zaid 2027 के लिएबीमा चाहिए,apply_insurance
+गेहूं की फसल का क्लेम कहाँ है na,check_status
+do i need to give any more papers,missing_docs
+please correct the season to rabi 2026-27,correct_season
+सुनिए mera claim status kya hai,check_status
+ji bima kaise milega,apply_insurance
+yes please,approve
+Ji krb 2026 50165 ke liye kya documents lagenge,missing_docs
+Ji do not change anything,reject
+Haa ठीक है thank you,approve
+please how to apply for pmfby,apply_insurance
+Haan sahi hai,approve
+हाँ आगे बढ़ो,approve
+haan my maize was a rabi 2026-27 crop,correct_season
+What papers do i need to submit,missing_docs
+अरे mere paas document hai bhej do,upload_doc
+मेरे पास कागज़ है जमा कर दीजिए ji,upload_doc
+Ji asy that again please,repeat
+बीमा में नाम लिखवाना है,apply_insurance
+i want to upload a document,upload_doc
+cancel karo thank you,reject
+Kardo,approve
+Connect me to a persn ji,book_help
+जी i want to speak to someone,book_help
+Khatauni jama karni hai,upload_doc
+mera claim pass hua kya,check_status
+acha wheat तो rabi में बोया था,correct_season
+Ra ram,greet
+namasskar,greet
+Claim status for k r b 2 0 2 6 7 2 5 1 2,check_status
+आवेदन k r b 2 0 2 6 8 9 1 7 3 के लिए ौन से दस्तावेज़ चाहिए,missing_docs
+bha ना please,reject
+kisi insaaan se baat karao,book_help
+kaunsa document missing hai,missing_docs
+kisi insaan se baat karao,book_help
+Season badal do रबी,correct_season
+सीजज़न सही कर दीजिए,correct_season
+hello please,greet
+Yes please,approve
+अरे book a call with an agent na,book_help
+चुटकुा सुनाओ na,unknown
+ji फसल बीमा कैैसे लें,apply_insurance
+bhai एएक बार और बोलिए,repeat
+acha season galat hai रबी 2026-27 karo,correct_season
+umm good evening,greet
+talk to an officer,book_help
+fasal bima ke liye apply karna hai,apply_insurance
+Land record upload karo jaldi,upload_doc
+Zara krb-2026-86585 ke liye kya documents lagenge,missing_docs
+i want to inure my cotton crop,apply_insurance
+wheat rabi me boya tha kharif nahi,correct_season
+umm सुप्रभात,greet
+train ticekt book karo जी,unknown
+yes go ahead,approve
+dobara btao,repeat
+जी where is my claim,check_status
+फसल बीमा कैसे लें,apply_insurance
+अभीन हीं,reject
+bhai book a call with an agent,book_help
+जी what papers do i need to submit,missing_docs
+good evening,greet
+ठकी है,approve
+send my papers,upload_doc
+naahi,reject
+abhi nahi,reject
+नहीं रुको na,reject
+Umm wheat ka bima karna hai,apply_insurance
+मेरे क्लेम का स्टेटस क्या है,check_status
+हैलो,greet
+New policy chahiye,apply_insurance
+umm ypaaz ka bhav kya hai,unknown
+zara मेरे क्लेम में कौन सा कागज़ कम है,missing_docs
+is any document pending,missing_docs
+Please i need help,book_help
+New policy chahiye,apply_insurance
+send my papers,upload_doc
+Na कृपया,reject
+zara कौन सा डॉक्यूमेंट मिसिंग है,missing_docs
+my crop was sown in रबी 2026-27 not kharif,correct_season
+bhai एक बार और बोलिए,repeat
+Haan sahi hai,approve
+who own the cricket match,unknown
+चुटकुला सुनाओ,unknown
+ji do i need to give any more papers,missing_docs
+खाना कैसे बनाएं thank you,unknown
+मेरा आवेदन नंबर krb-2026-64382 है,check_status
+अरे khatauni jama karni hai jaldi,upload_doc
+मुझे दस्तावेज़ अपलोड करना है,upload_doc
+अभी नहीं,reject
+season galat hai रबी karo,correct_season
+जी upload the ddocument for krb 2026 30503,upload_doc
+stop,reject
+ठीक है,approve
+Khana kaise bnaye,unknown
+नमस्कार,greet
+aaj mausam kaisa hai jaldi,unknown
+hi na,greet
+कौन सा दस्तावेेज़ बाकी है na,missing_docs
+paisa aayak i nahi,check_status
+मौसम बदलकर rabi करो,correct_season
+भूमि रिकॉर्ड अपलोड करो,upload_doc
+Zara my phone is broken कृपया,unknown
+समझ नहीं आया,repeat
+kaunsa document missing hai कृपया,missing_docs
+Season badal do khraif,correct_season
+जी call me back please,book_help
+खतौनी जम करनी है,upload_doc
+Say that again,repeat
+नया बीमा करवाना है,apply_insurance
+अरेc ancel it,reject
+खतौनी जमा करनी है जी,upload_doc
+tell me my claims tatus,check_status
+Sir iwant to upload a document,upload_doc
+आज ौसम कैसा है,unknown
+yes go ahead,approve
+मंज़ूर है,approve
+connect me to a person,book_help
+I aprove,approve
+खतौनी जमा करनी है,upload_doc
+Haan बीमा में नाम लिखवाना है jaldi,apply_insurance
+haan हां कर दो,approve
+attach my document,upload_doc
+Ek bar aur,repeat
+what is the price of onion,unknown
+season galat hai जायद karo bhai,correct_season
+भूमि रिकॉर्ड अपलोड करो,upload_doc
+sir मेरी फसल ाजयद की थी,correct_season
+Sir n othat is wrong,reject
+aprpove,approve
+कागज़ अपलोड कर दो,upload_doc
+Once more please,repeat
+हेल्पलाइन से बात करनी है,book_help
+मेरी फसल रबी 2026-27 की थी,correct_season
+अरे hteek hai,approve
+not now,reject
+help bok karo,book_help
+the season is wrong it should be rabi 2026-27,correct_season
+didi get paid for cotton,check_status
+attach my document ji,upload_doc
+मेरे पास कागज़ है जमा कर दीजिए jaldi,upload_doc
+ट्रेन का टिकट बुक करो,unknown
+समझ नहीं आया,repeat
+approve,approve
+hello ji,greet
+bima ka paisa kab milega,check_status
+Umm धानk a bima karna hai,apply_insurance
+acha what papers do i need to submit कृपया,missing_docs
+the season is wrong it should be zaid 2027,correct_season
+sahayata chahiye jaldi,book_help
+मुझे कॉल करवाइए,book_help
+Ha ji,approve
+Ji papers submit karne hain,upload_doc
+did i get paid for कपास,check_status
+Okay proceed bhai,approve
+say that again,repeat
+How to apply for pmfby,apply_insurance
+मेरे क्लेम का स्टेटस क्या है,check_status
+मुझे कॉल करवाइए,book_help
+Ram ram,greet
+play a song,unknown
+Ruko mta badlo,reject
+please phir se bolo,repeat
+umm सीज़न सही कर दीजिए,correct_season
+haan K R B 2 0 2 6 1 7 5 8 9 ke liye kya documents lagenge,missing_docs
+once more please thank you,repeat
+once more please,repeat
+सुनिए phir sse bolo ji,repeat
+Rabi के लिए बीमा चाहिए,apply_insurance
+राम राम thank you,greet
+सुप्रभात,greet
+nto now,reject
+New insurance application for गेहूं,apply_insurance
+zara insurance ke liye registration karna hai,apply_insurance
+रिकॉर्ड में सीज़न गलत लिखा है please,correct_season
+fasal bima ke liye apply karna hai,apply_insurance
+please yes,approve
+aaj mausam kaisa hai bhai,unknown
+has the payment come for my padd crop na,check_status
+repeat,repeat
+rejeect,reject
+kar do,approve
+sir mujhe call krawao,book_help
+ek baar aur,repeat
+फरि से बोलो thank you,repeat
+हाँ आगे  बढ़ो,approve
+okay proceed,approve
+आवेदन krb-2026-62216 की स्थिति बताइए,check_status
+book a train ticket,unknown
+हेल्पलाइन से बात करनी है,book_help
+जी cancel karo,reject
+acha रिकॉर्ड में सीज़न गलत लिखा है,correct_season
+कागज़ अपलोड कर दो,upload_doc
+एक बा रऔर बोलिए,repeat
+correct go ahead,approve
+मेरे पास कागज़ है जमा कर दीजिए,upload_doc
+ji enroll me in crop insurance for rabi,apply_insurance
+maize तो rabi में बोया था,correct_season
+अरे my phone is broken,unknown
+Umm fasal bima ke liye aplpy karna hai,apply_insurance
+अरे kharif े लिए बीमा चाहिए,apply_insurance
+mera  claim pass hua kya bhai,check_status
+manjoor,approve
+helllo is anyone there,greet
+Mere claim me kaunsa kagaz kam hai,missing_docs
+haan मेरा दावा कहाँ तक पहुँचा,check_status
+Sir cotton तो खरीफ में बोया था,correct_season
+हैलो,greet
+umm i want to insure my धान crop,apply_insurance
+Srue,approve
+जी हाँ,approve
+Upload my land record,upload_doc
+गेहूं ka bbima karna hai,apply_insurance
+please joke sunao,unknown
+जी नया बीमा करवाना है,apply_insurance
+Upload the document for krb-2026-95072,upload_doc
+book a train ticket,unknown
+claim kahan tak pahuncha jadi,check_status
+claim status for KRB-2026-73048 कृपया,check_status
+भूमि रिकॉर्ड अपलोड करो,upload_doc
+nahi जी,reject
+sir meri fasal जायद ki thi,correct_season
+Acha paddy की फसल का क्लेम कहाँ है,check_status
+zar ayes go ahead,approve
+enroll me in crop insurance for रबी 2026-27,apply_insurance
+K r b 2 0 2 6 1 1 9 1 9 ke liye kya documents lagenge,missing_docs
+acha do i need to give any more papers,missing_docs
+please repeat,repeat
+i want to upload a document,upload_doc
+Zara i have the papers now,upload_doc
+मुझे दस्तावेज़ अपलोड कनरा है,upload_doc
+i have the papers now,upload_doc
+zara namaskar ji,greet
+help obok karo ji,book_help
+si rnew policy chahiye,apply_insurance
+Zara ठीक है,approve
+okay porceed,approve
+ji pranam,greet
+Document upload karna hai,upload_doc
+Reject,reject
+where is the nearest hospital,unknown
+खाना कैसे बनाएं,unknown
+sir ism y money credited,check_status
+रिकॉर्ड मेंसीज़न गलत लिखा है,correct_season
+सीज़ सही कर दीजिए,correct_season
+क्या ककहा,repeat
+goo dmorning,greet
+kya bola,repeat
+Connect me to a person,book_help
+भुतगान हुआ या नहीं,check_status
+claim staus for KRB-2026-47537,check_status
+नमस्कार,greet
+अरे ाधन का बीमा करवाना है jaldi,apply_insurance
+मुझे मदद चाहिए bhai,book_help
+bhai what is two plus two,unknown
+what papers do i need to submit bhai,missing_docs
+Record me season galat hai,correct_season
+Zara क्या कहा,repeat
+bhai नमस्कार,greet
+what did you say jaldi,repeat
+Mere paas document hai bhej do,upload_doc
+What is the weather today,unknown
+my crop was sown in kharif not kharif,correct_season
+say that again,repeat
+smaajh nahi aaya,repeat
+सीज़न सही कर दीजिए,correct_season
+Cnnect me to a person,book_help
+kisi officer se baat karni hai na,book_help
+no dont do it,reject
+fasal bima ke liye apply karna hai,apply_insurance
+अरे ठीक है,approve
+कौन सा दस्तावेज़ बाकी है कृपया,missing_docs
+good evening,greet
+acha रदद्द करो,reject
+I approve,approve
+no that is wrong,reject
+गानाच लाओ,unknown
+acha tell me my claim status,check_status
+कागज़ अपलोड कर दो,upload_doc
+haan what time is it कृपया,unknown
+mustard khariff 2026 me boya tha kharif nahi,correct_season
+help book karo,book_help
+मुझे मदद चाहिए,book_help
+रद्द करो thank you,reject
+जी where is th enearest hospital,unknown
+कौन से ागज़ जमा करने हैं,missing_docs
+Cancel it,reject
+Kar do,approve
+say that again,repeat
+अरे tell me my claim status,check_status
+mere paas document hai bhej do thank you,upload_doc
+what did you say,repeat
+Mera claim status kya hai,check_status
+sir my phone is broken,unknown
+ji भूमि रिकॉर्ड अपलोड करो,upload_doc
+Bhai मेरे पास कागज़ है जमा कर दीजिए na,upload_doc
+हां ककर दो,approve
+hey tthere,greet
+Sir payaz ka bhav kya hai,unknown
+acha the record has the wrong season,correct_season
+helllo ji,greet
+अरे मेरे कल्ेम में कौन सा कागज़ कम है,missing_docs
+I want to upload a document,upload_doc
+one more please,repeat
+please document  upload karna hai,upload_doc
+ek baar aur,repeat
+please correct the season toर बी,correct_season
+who won the cricket match,unknown
+approve jaldi,approve
+Haa nna,approve
+नमस्ते,greet
+No that si wrong,reject
+haan kar do,approve
+हे्पलाइन से बात करनी है,book_help
+जी has the payment come for my कपास crop jaldi,check_status
+अरे goode vening,greet
+Ji नमस्ते,greet
+Haan season badal do kharif 2026 thank you,correct_season
+acha nhi na,reject
+haan season galat hai खरीफ karo,correct_season
+Asddf qwer na,unknown
+sir मुझे कॉल करवाइए जी,book_help
+Not now jaldi,reject
+acha i want to speak to someone bhai,book_help
+kharif के लिए बीमा चाहिए,apply_insurance
+Yes og ahead,approve
+papers usbmit karne hain,upload_doc
+जी claim ka status batao K R B 2 0 2 6 4 2 9 9 2,check_status
+mujhe call karwao कृपया,book_help
+सुनिए मुझे फसल बीमा के लिए आवेदन करना है,apply_insurance
+सुप््रभात,greet
+क्लेम मंजूर हुआ या नहीं जी,check_status
+wrong season inm y application,correct_season
+अरे kisi officer se baat karni hai please,book_help
+Please repeat,repeat
+नहीं रुको,reject
+Good morning,greet
+Fasal bima ke liye apply karna hai,apply_insurance
+apprve,approve
+Ji हैलो,greet
+सीज़न गलत है rabi 2026-27 होना चाहिए,correct_season
+Hi ji,greet
+Joke sunao,unknown
+how do i register for fasal bima,apply_insurance
+no,reject
+Haan kaun se documents chahiye thank you,missing_docs
+cancel na,reject
+नहीं रुको,reject
+samajh nahi  aaya,repeat
+kisi officer se baat karni hai,book_help
+My application umber is krb-2026-59177,check_status
+mere claim me kaunsa kagaz kam hai,missing_docs
+Season theek kar do,correct_season
+upload my land record जी,upload_doc
+how do i register foor fasal bima bhai,apply_insurance
+Mera claim pass hua kya,check_status
+Mere claim me kaunsa kagaz kam hai,missing_docs
+acha बीमा में नाम लिखवानना है,apply_insurance
+khatauni jama karni hai,upload_doc
+sir मेरा आवेदन नंबर  KRB-2026-24385 है,check_status
+Book a callwith an agent,book_help
+sir हाँ आगे बढ़ो,approve
+Boook a call with an agent,book_help
+ji season theek kar do,correct_season
+hello,greet
+ji bima kaise milega,apply_insurance
+Once more please,repeat
+i want to insure my सरसों crop,apply_insurance
+ना,reject
+document upload karna hai,upload_doc
+document pending kya hai,missing_docs
+Hello is anyone there,greet
+zara didi get paid for cotton,check_status
+phir se bloo,repeat
+Hello ji jalldi,greet
+क्या कहा,repeat
+hi,greet
+मत करो,reject
+kya kaagz baaki hai,missing_docs
+आज मौसम कैसा है,unknown
+हाँआ गे बढ़ो,approve
+hello,greet
+no dont do it,reject
+Connect me to a person,book_help
+Book acall with an agent,book_help
+acha na,reject
+mat karo,reject
+गेहूं कका बीमा करवाना है,apply_insurance
+ji मैच किसने जीता,unknown
+i want to speak to somene,book_help
+pranamb hai,greet
+फिर से बबोलो,repeat
+सनिए ram ram,greet
+send my papers,upload_doc
+kaun se document schahiye please,missing_docs
+upload the document for KRB-2026-86833,upload_doc
+tell me a joke,unknown
+manjoor,approve
+I did not hear thank you,repeat
+sya that again,repeat
+ye sthat is right,approve
+How to appl for pmfby,apply_insurance
+समझ नहीं आया,repeat
+Kaun se documents chahiye,missing_docs
+mera claim status kya hai,check_status
+why is my claim stuck on documents,missing_docs
+not now thank you,reject
+Cancel it,reject
+okay proceed,approve
+haan what time is it कृपया,unknown
+ek baarr aur please,repeat
+hello na,greet
+haan yes that is right,approve
+मंज़ूर है,approve
+हां क रदो,approve
+अरे क्या कहा,repeat
+Haan मेरा दावा कहाँ तक पहुँचा,check_status
+What is the weather today,unknown
+समझ नहीं आया,repeat
+Nmaaste,greet
+Dobara batao,repeat
+hi,greet
+Updatemy season to rabi 2026-27,correct_season
+mustard ka bima karna hai,apply_insurance
+Phir se bolo,repeat
+ruko mat badlo,reject
+bhai namaste ji,greet
+सुनिए अभी नहीं,reject
+मैच किसने जीता,unknown
+umm khana kase banaye,unknown
+My कपास was a kharif crop,correct_season
+Madad chahiye,book_help
+nahi rehne do,reject
+नया बीमा करवाना है,apply_insurance
+मेरा दावा कहाँ तक पहँचा,check_status
+please correct the season to rabi,correct_season
+acha मेरे क्लेम का स्टेटस क्या है,check_status
+Naaya bima karwana hai,apply_insurance
+insurance ke liye registration karna hai,apply_insurance
+जी status of appliction krb 2026 36002,check_status
+मिलने का समयबुक करो na,book_help
+Attach my docuument,upload_doc
+अरे yes please,approve
+खाना कैसे बनाएं,unknown
+Umm land record upload karo thank you,upload_doc
+ट्रेन क ाटिकट बुक करो,unknown
+मंज़ूर है कृपया,approve
+status of application K R B 2 0 2 6 8 3 8 1 6,check_status
+Naahi,reject
+ji मेरे पास काागज़ है जमा कर दीजिए,upload_doc
+haan कपास का बीमा करवाना है ji,apply_insurance
+खतौनी जमा करनी है,upload_doc
+hi,greet
+Kaunsa document missing hai,missing_docs
+सहायता चाहिए,book_help
+abhi nahi,reject
+document upload karna hai,upload_doc
+do i needto give any more papers,missing_docs
+अरे फसल बीमा ैकसे लें na,apply_insurance
+जी किसी इंसान से बात कराओ please,book_help
+once more please thank you,repeat
+रद्द करो,reject
+how do i register for fasal bima,apply_insurance
+मुझे फसल बीमा के लिए आवेदन ककरना है,apply_insurance
+bhai rrepeat,repeat
+acha approve,approve
+मौसम बदलकर kharif 2026 करो,correct_season
+अरे cancel karo please,reject
+जी ruko mat badlo,reject
+कागज़ अपलोडक र दो,upload_doc
+nhai rehne do,reject
+खाना कैसे बनाएं,unknown
+No that is wrong,reject
+bim aka paisa kab milega,check_status
+theek ai,approve
+why is my claim stuck on documents na,missing_docs
+मेरे पास कागज़ है जमा कर दीजिए,upload_doc
+i paprove,approve
+रिकॉर्ड में सीज़न गलत लिखा है,correct_season
+which documents are missing,missing_docs
+Acha जजी हाँ,approve
+kar do,approve
+tell me a joke,unknown
+Madad chahiye,book_help
+Papers submit karrne hain,upload_doc
+Not now कृपया,reject
+who won the crciket match,unknown
+अरे tell me them issing documents thank you,missing_docs
+आवेदन KRB-2026-82211 के लििए कौन से दस्तावेज़ चाहिए,missing_docs
+new policy chahiye,apply_insurance
+ठीक है please,approve
+haan मेरे क्लेम में कौन सा कागज़ कम है ji,missing_docs
+मुझे फसल बीमा के लिए आवेदन करना है bhai,apply_insurance
+मेरे क्लेम का स्टेटस क्या है जी,check_status
+what is two plus two,unknown
+Bhai tell me my claim status,check_status
+what papres do i need to submit,missing_docs
+haan approvve ji,approve
+जी phiir se bolo,repeat
+Haan is any document  pending,missing_docs
+सुनिए hello is anyone there please,greet
+is my money credited कृपया,check_status
+correct go ahead,approve
+जी nahi rehne do,reject
+फस लबीमा कैसे लें,apply_insurance
+नहीं,reject
+book a clal with an agent,book_help
+kisi officer se baat karni hai,book_help
+once more please जी,repeat
+फसल बीमा कैसे लें,apply_insurance
+sir मुझे दस्तावेज़ अपलोड करना है,upload_doc
+अरे i did not hear,repeat
+I wat to speak to someone,book_help
+नहीं na,reject
+सुनिए abh nahi,reject
+ruko  mat badlo,reject
+haan कृपया,approve
+speak again slowly ji,repeat
+Apporve,approve
+has my nisurance claim been approved,check_status
+हेल्पलाइन से बात करनी है,book_help
+Meri fasal जायद ki thhi ji,correct_season
+zara i need help bhai,book_help
+kagaz upload kra do,upload_doc
+Submit the missing document,upload_doc
+Namaste ji thank you,greet
+helllo,greet
+zaraa document pending kya hai,missing_docs
+Do i need to give any more papers,missing_docs
+status of application K R B 2 0 2 6 2 7 7 6 0,check_status
+मुझे ममदद चाहिए,book_help
+मंज़ूर है,approve
+which documents are mmissing,missing_docs
+What documents are required for krb-2026-7828 jaldi,missing_docs
+Mera claim pass hua kya na,check_status
+सुनिए फसल बीमा कैसे लें,apply_insurance
+umm wrong season in my application,correct_season
+nahi,reject
+hello,greet
+Update my season to रबी 202627,correct_season
+record meseason galat hai bhai,correct_season
+Ji hello ji,greet
+मैच किसने जीता,unknown
+प्रणाम,greet
+प्याज का भाव क्या है,unknown
+मत करो,reject
+हाँ,approve
+wheat कका बीमा करवाना है,apply_insurance
+New insurance application for wheat,apply_insurance
+paisa aaya ki nahi,check_status
+haan kkar do,approve
+सुनिए claim ka status batao krb-2026-67000,check_status
+smaajh nahi aaya,repeat
+mera claim status kya hai,check_status
+सीज़न सही कर दीजिए,correct_season
+सुनिए enroll me in crop insurance for rabi,apply_insurance
+गन्ना रबी 2026-27 me boya tha kharif nahi,correct_season
+mere paas document hai bhej do please,upload_doc
+season thee kkar do,correct_season
+acha what documents are required for KRB-2026-60956 कृपया,missing_docs
+bhai kisi officer se baat karni hai jaldi,book_help
+आवेदन krb 2026 78231 के लिए कौन से दस्तावेज़ चाहिए,missing_docs
+सीज़न सही कर दीजिए,correct_season
+Bhai i appove,approve
+हेल्पलाइन से बात करनी है,book_help
+okay proceed,approve
+upload my land record,upload_doc
+Bhai भुगतान हुआ या नहीं,check_status
+hello is anyone there,greet
+मत करो,reject
+haand o i need to give any more papers,missing_docs
+book a call with an agent,book_help
+सुनिए K R B 2 0 2 6 8 0 8 0 8 ke liye kya documnets lagenge,missing_docs
+bhai mujhe call karwao,book_help
+gaana chalao,unknown
+khatauni jama karni hai,upload_doc
+Pleasespeak again slowly,repeat
+wheat जायद me boya tha kharif nahi,correct_season
+sure,approve
+enroll me in crop insurance for रबी 2026-27 जी,apply_insurance
+रद्द ककरो,reject
+where is my caim,check_status
+Whhat is the status of my claim,check_status
+जी theke hai,approve
+yes,approve
+nahi,reject
+what did you ssay,repeat
+acha कपास रबी 2026-27 me boyat ha kharif nahi,correct_season
+paisa aaya ki nahi,check_status
+ji धान rabi 2026-27 me boya tha kharif nahi जी,correct_season
+No dont do it,reject
+mera claim status kya hai,check_status
+i want to speak to someone bhai,book_help
+प्रणाम,greet
+once more please,repeat
+Please correct the season to kharif 2026 jaldi,correct_season
+sahayata chahiye bhai,book_help
+change season to khari f2026,correct_season
+what is the status of my claim,check_status
+गना चलाओ,unknown
+Nahi rehne do,reject
+रिकॉर्ड में सीज़न गलत लिखा है,correct_season
+Pyaaz kka bhav kya hai,unknown
+play a song,unknown
+yes g oahead,approve
+मरे पास कागज़ है जमा कर दीजिए,upload_doc
+ruo mat badlo,reject
+Zara मौसम बदलकर रीब करो,correct_season
+khana kaise banaye,unknown
+zara  आवेदन KRB-2026-70592 के लिए कौन से दस्तावेज़ चाहिए,missing_docs
+zara दस्तावेज़ भेजना है,upload_doc
+new policy chahiye,apply_insurance
+tell me the missing documents,missing_docs
+जी kagaz upload kar do,upload_doc
+mera claim status kya hai,check_status
+Who won the cricket match,unknown
+please talk toan officer,book_help
+हाँ आगे बढ़़ो कृपया,approve
+किसी अधिकारी से बात करनी है,book_help
+Um repeat,repeat
+repeat,repeat
+एक बार और बोलिए,repeat
+हां कर दो,approve
+हेल्पलाइन से बात करनी है,book_help
+नहीं,reject
+Bhai train ticket book karo,unknown
+नया बीम ाकरवाना है,apply_insurance
+नहीं,reject
+Wheat की फसल का क्लेम कहाँ है,check_status
+seaso ntheek kar do,correct_season
+मुझे कॉल करवाइए thhank you,book_help
+i want to apply for crop insurance thank you,apply_insurance
+not now,reject
+सुनिए खतौनी जमा करनी है,upload_doc
+Kya bola कृपया,repeat
+नहीं,reject
+अरे what is the status of my claim,check_status
+what papers do i need to submit,missing_docs
+हेल्पलाइन से बात करनी है,book_help
+claim status for KRB-20265-5069 कृपया,check_status
+जी आवेदन krb 2026 24931 की स्थिति बताइए,check_status
+एक बार और ोलिए,repeat
+haan सीज़न गलत है kharif 2026 होना चाहिए,correct_season
+किसी इंासन से बात कराओ,book_help
+zara हेल्पलाइन से बात करनी है,book_help
+Dobara batao,repeat
+manjjoor,approve
+क्या मेरा पैसा आ गया,check_status
+umm call me back please,book_help
+Who won the cricket match,unknown
+सुप्रभात,greet
+Dobara atao,repeat
+किसी इंसान सेब ात कराओ,book_help
+check my claim status KRB-2026-76619,check_status
+Umm नया बीमा करवाना है please,apply_insurance
+new insurance application for कपास,apply_insurance
+connect me to a person,book_help
+Kya kkagaz baaki hai,missing_docs
+record me esason galat hai,correct_season
+bhai haan akr do कृपया,approve
+मेरे पास कागज़ है जमा कर दीजिए,upload_doc
+cancel it,reject
+Correct go ahead,approve
+मुझे कॉल करवाइए,book_help
+जी haan  kar do,approve
+theek hai,approve
+play a ong,unknown
+sre,approve
+सीज़न गलत है रबी होना चाहिए,correct_season
+document pending kya hai,missing_docs
+please aabhi nahi,reject
+bhai cancel karo,reject
+upload my land record,upload_doc
+अरे apply kaise karu,apply_insurance
+haan sahi hai,approve
+अरे yes that is right,approve
+i have the papers now,upload_doc
+what is two plus two,unknown
+सुनिए how to apply for pmfby na,apply_insurance
+दोबारा बताइए na,repeat
+What is the status of my claim please,check_status
+yes please bhai,approve
+apply kaise karu,apply_insurance
+क्या का na,repeat
+रिकॉर्ड में सी़जन गलत लिखा है,correct_season
+okay proceed,approve
+मेरे क्लेम मेंक ौन सा कागज़ कम है,missing_docs
+how to apply ffor pmfby,apply_insurance
+मेरी फलस रबी की थी,correct_season
+जी helllo ji जी,greet
+asdf qwer,unknown
+submit the missing document जी,upload_doc
+चुटकुलास ुनाओ ji,unknown
+मिलने का समय बुक करो,book_help
+bhai क्या मेरा पैसा आ गया jaldi,check_status
+haan mat karo,reject
+हैलो,greet
+दस्तावेज़ भेजना है,upload_doc
+Haan kar do,approve
+sir meri fasal जायद ki thi,correct_season
+Good mmorning,greet
+claim status for KRB-2026-61605,check_status
+Zara madad chahiye,book_help
+कौन सा दस्तावेज़ बाकी है,missing_docs
+madad chahiye,book_help
+manjoor,approve
+status of application krb 2026 87026,check_status
+why is my claim stuck on documents,missing_docs
+samajh nahi aaya jaldi,repeat
+zaara ना,reject
+ji mujhe call karwao jadli,book_help
+khana akise banaye,unknown
+bhai K R B 2 0 2  1 1 6 2 9 ke liye kya documents lagenge,missing_docs
+good eveniing,greet
+kagaz upload kardo,upload_doc
+cancel,reject
+the season is wrong it should be kharif 2026,correct_season
+प्रणाम pleease,greet
+i ddid not hear,repeat
+how do i register for fasal bima,apply_insurance
+what is two plus two,unknown
+सुनिए insurance ke liye registration karna hai,apply_insurance
+the record has the wrong season,correct_season
+अरे book a call with an agent जी,book_help
+repeat जी,repeat
+भूमि रिकॉर्ड अपलोड करो,upload_doc
+सुनिए  tell me a joke,unknown
+अरे madad chahiye jaldi,book_help
+new poicy chahiye,apply_insurance
+i approove,approve
+document upload karna hai,upload_doc
+ji मिलने का समय बुक करो,book_help
+Okay proceed thank you,approve
+Bhai i need help,book_help
+Please where is  my claim,check_status
+What is two plus two jaldi,unknown
+How to aply for pmfby,apply_insurance
+manjoor,approve
+i want to upload a document,upload_doc
+season galat hai zai d2027 karo,correct_season
+Cofnirm,approve
+Kagaz upload kar do,upload_doc
+haan what is two plsu two,unknown
+हाँ jaldi,approve
+प्राणम,greet
+समझ नहीं आया,repeat
+umm joke sunao,unknown
+namaste please,greet
+claim ka status batao krb 2026 36512,check_status
+what is two plus two,unknown
+I want to apply for crop insurannce,apply_insurance
+फसल बीमा कैसेलें,apply_insurance
+what documents are required for KRB-2026-13526,missing_docs
+madad chahiye,book_help
+wrong season in my  application,correct_season
+haan paddy का बीमा करवाना है,apply_insurance
+Check my claim status krb-2026-57654,check_status
+Nmaste ji जी,greet
+अरे cancel it,reject
+हाँ jaldi,approve
+Wheatt की फसल का क्लेम कहाँ है,check_status
+zara सही है कर दीजिए कृपया,approve
+sttop,reject
+match kaun jeeta,unknown
+I have the khatauni let me upload it,upload_doc
+acha document uppload karna hai,upload_doc
+कौन सा डॉक्यूमेंट मिसिंग है कृपया,missing_docs
+come again,repeat
+ji pload the document for KRB-2026-70328,upload_doc
+नममस्कार,greet
+मत करो,reject
+Bhai document upload karna hai,upload_doc
+haan what documents are required for krb 2026 35221,missing_docs
+कौन सा दस्ावेज़ बाकी है,missing_docs
+papers submit karne hain,upload_doc
+Stop than kyou,reject
+सुनिए maize का बीमा करवाना है,apply_insurance
+ji no,reject
+approve,approve
+Naya bima karwana hai,apply_insurance
+once more please,repeat
+bhai राम राम,greet
+मेरे क्लेम में कौन सा कागज़ कम है,missing_docs
+Where is my lcaim,check_status
+समझ नहीं आया,repeat
+Conenct me to a person,book_help
+document upload karna hai,upload_doc
+papers submit karne hain jaldi,upload_doc
+I want to speak to someone कृपया,book_help
+मौसम बदलकर खरीफ करो,correct_season
+Boook an appointment for help,book_help
+नया बीमा करवाना है,apply_insurance
+Samjah nahi aaya,repeat
+आवेदन K R B 2 0 2 6 0 5 1 8 3 के लिए कौन से दस्तावेज़ चाहिए,missing_docs
+book an appointment for help na,book_help
+सुनिए kisi insaan se baat karao,book_help
+Stop,reject
+मंज़ूर है कृपया,approve
+Enroll me in crop insurance forr रबी 2026-27 bhai,apply_insurance
+connect me  to a person jaldi,book_help
+once more please,repeat
+ek baar aur jaldi,repeat
+hi,greet
+सुनिए my paddy was a rabi 2026-27 crop,correct_season
+Is any documeent pending,missing_docs
+i want to speak to somoene na,book_help
+ji do not change anything,reject
+मेरा दावा काँ तक पहुँचा,check_status
+मेरे क्लेम में कौन सा कागज़ कम है,missing_docs
+फिर से बोलो ji,repeat
+new insurance application for mustard,apply_insurance
+खाना कैसे बनाएं कृपया,unknown
+मेरे क्लेम में कौन सा कागज़ कम है,missing_docs
+सुुनिए हां कर दो,approve
+zara किसी अधिकारी से बात करनी है,book_help
+हेल्पलाइन से बात करनी है,book_help
+apply kaise karu,apply_insurance
+Theek hai कृपया,approve
+send myy papers कृपया,upload_doc
+book a train ticket bhai,unknown
+राम राम,greet
+Sir status of application krb 2026 03441,check_status
+Sahayata chahiye na,book_help
+रिकॉर्ड में सीज़न गलत लिखा है,correct_season
+reejct,reject
+season galat hai fix it,correct_season
+जी connect me to a person,book_help
+मुझे कॉल कवाइए thank you,book_help
+document pending kya ahi,missing_docs
+कौन सा डॉक्यूमेंट मिसिंग है,missing_docs
+wrong season in my application,correct_season
+सुनिए ram ram,greet
+canccel it,reject
+say that gaain,repeat
+राम राम,greet
+cancel,reject
+Ji application k r b 2 0 2 6 2 3 6 2 7 ka kya hua जी,check_status
+Do nt change anything,reject
+tell me the missing documents,missing_docs
+gaana chalao,unknown
+hello ji,greet
+ji बीमा में नाम लिखवाना है ji,apply_insurance
+Khana kaise banaye,unknown
+why is my claim stuck on documents,missing_docs
+book an appointment for help,book_help
+I want to apply for crop insurance,apply_insurance
+hey there ji,greet
+acha बीमा में नाम लिखवाना है,apply_insurance
+Hello ji,greet
+सुनिए कौन से कागज़ जमा करने हैं,missing_docs
+send my papers,upload_doc
+say that gaain,repeat
+मेरा दावा कहँ तक पहुँचा,check_status
+Good evening,greet
+bhai किसी अधिकारी से बात करनी है,book_help
+please सीज़न गलत है खरीफ होना चाहिए,correct_season
+सुनिए how to cook rice thank you,unknown
+haan repet जी,repeat
+talk to an officer,book_help
+the record has the wrong season,correct_season
+दोबारा बताइए,repeat
+canel,reject
+zara what did you say please,repeat
+update my seasonn to रबी जी,correct_season
+khana kaise banaye,unknown
+Nmaaste bhai,greet
+कौन सा डॉक्यूमेंट मिसिंग है,missing_docs
+i want to apply for crop insurance,apply_insurance
+समझ नहीं आया,repeat
+i want to apply for crop insurance,apply_insurance
+umm namaskar,greet
+Mera number k r b 2 0 2 6 1 2 9 9 9 hai status bata do,check_status
+Acha दोबारा बताइए,repeat
+Cnfirm bhai,approve
+आज मौसम कैसा है,unknown
+i want t insure my सरसों crop,apply_insurance
+hey tere,greet
+samajh nahi aaya ji,repeat
+upload my land record,upload_doc
+Hello ji,greet
+सही है कर दीजिए,approve
+aaj mausam kaisa hai na,unknown
+sir kisi officer se baat karni hai,book_help
+Gaana chlaao,unknown
+Umm record me season galat hai,correct_season
+kaun se documents cahiye,missing_docs
+sir submit the missing ocument,upload_doc
+what did you say,repeat
+Send my papers,upload_doc
+जी where is my claaim,check_status
+pyaaz kab hav kya hai,unknown
+season badal do kharif 2026 ककृपया,correct_season
+good evening जी,greet
+i approve,approve
+paddy तो kharif 2026 में बोया था,correct_season
+हैलो,greet
+i want to speak to someone,book_help
+bhai कौन से कागज़ जमा करने हैं,missing_docs
+Zara season theek kar do,correct_season
+Match kaun jeeta,unknown
+मेरे  क्लेम का स्टेटस क्या है,check_status
+Tell me my claim status,check_status
+namaste,greet
+Haan कौन सा डॉक्यूमेंट मिसिंग है,missing_docs
+ji o not change anything,reject
+जी gaana chalao,unknown
+राम ारम,greet
+how do i register for fsal bima,apply_insurance
+खानना कैसे बनाएं,unknown
+Jiक ्या कहा,repeat
+mera claim pass hhua kya please,check_status
+हाँ आगे बढ़ो,approve
+mere claim me kaunsa kaga zkam hai,missing_docs
+namaste ji na,greet
+Sahayata chahiye,book_help
+why is my claim sstuck on documents,missing_docs
+कौन स डॉक्यूमेंट मिसिंग है,missing_docs
+Call me back please कृपया,book_help
+अरे what is the price of onion please,unknown
+भूमि रिकॉर्ड अपलोड करो,upload_doc
+haan thank you,approve
+ok do it,approve
+Goodm orning,greet
+gaana chalao कृपया,unknown
+bima kaise milega,apply_insurance
+Haan mujhe caall karwao,book_help
+आवेदन krb-2026-11300 की स्थिति बताइए,check_status
+is any document pending,missing_docs
+manjoor,approve
+I want to speak to someone,book_help
+क्या कहा,repeat
+मैच किसने जीता jldi,unknown
+अभी नहीं,reject
+change season to रबी 2026-27 na,correct_season
+जी mujhe call karwao please,book_help
+update my season to rabi 2026-27,correct_season
+sir who wont he cricket match,unknown
+फिर से बोलो thank you,repeat
+khatauni jama kanri hai thank you,upload_doc
+has my insurance claim been approved,check_status
+acha paisa aaya k nahi,check_status
+zara once more please,repeat
+मत  करो जी,reject
+acha फिर से बोलो,repeat
+please मेरी फसल kharif 2026 की थी,correct_season
+check my claim status K R B 2 0 2 6 7 0 7 4 8,check_status
+कागज़ात में क्या  कमी है,missing_docs
+kansa document missing hai jaldi,missing_docs
+Please insurance ke liye registration karna hai,apply_insurance
+खाना कैसे बनाएं,unknown
+Ha ji,approve
+मेरे क्लेम में कौन सा कागज़ कम है,missing_docs
+umm kya kagaz baaki hai,missing_docs
+bhai cancel it thank you,reject
+Ji record me season galat hai,correct_season
+gaana chalao कृपया,unknown
+abhi nahi,reject
+सुनिए हां कर दो,approve
+tell me the missing documents,missing_docs
+Document upload karna hai,upload_doc
+no जी,reject
+Umm समझ नहीं आया,repeat
+na,reject
+samajh nahi aaya,repeat
+bhai hey there,greet
+sir मुझे कल करवाइए,book_help
+umm nmaaskar,greet
+cancel karo,reject
+मिलने का समय बुक करो,book_help
+acha where is the nearest hospital,unknown
+maize का बीमा करवानना है,apply_insurance
+समझ नहीं यआा,repeat
+help book karo,book_help
+मैचक िसने जीता,unknown
+what papers do i need to submit,missing_docs
+fasal bima ke liye apply karna hai bhai,apply_insurance
+abhi nahi,reject
+अरे check my claim status k r b 2 0 2 6 2 0 9 6 9,check_status
+namaste,greet
+who won the cricket match,unknown
+मेरे पास कागज़ है जमा कर दीजिए na,upload_doc
+Zara naya bima karwana hai,apply_insurance
+I did not hear,repeat
+मुझे कॉल करवाइए कृपया,book_help
+zara ok do it jaldi,approve
+where is the nearest hospital कृपया,unknown
+Gaana chalao,unknown
+acha kya bola,repeat
+book a train ticket,unknown
+अरे hello ji,greet
+bhai come again,repeat
+मेरा आवेदन नंबर krb 2026 07989 है,check_status
+Papers submit karne hain,upload_doc
+hwo to apply for pmfby please,apply_insurance
+do not change anything ji,reject
+sir सहायता चािए,book_help
+fasal bima ke liye apply karna hai,apply_insurance
+ok do it,approve
+Rabi के लिए बीमा चाहिए,apply_insurance
+Nott now,reject
+sir no,reject
+म तकरो,reject
+कौन से कागज़ जमा करने हैं,missing_docs
+मुझे कॉल करवाइए please,book_help
+Haan दोबार ाबताइए,repeat
+Acha new insurance application for सरसों,apply_insurance
+speak again slowly,repeat
+प्रणाम na,greet
+कौन से कागज़ जमा करने हैं,missing_docs
+नही ंरुको,reject
+What papers do i need to submit,missing_docs
+cancel bhai,reject
+Please what is the price of onion,unknown
+Once more please,repeat
+अरे मेरे क्लेम में कौन सा कागज़ कम है,missing_docs
+Please joke suunao,unknown
+हेल्पलाइन से बात करनी है,book_help
+haan,approve
+I have the khatauni let me upload it,upload_doc
+check my claim status KRB-2026-49441,check_status
+Bhairepeat jaldi,repeat
+call me back please,book_help
+acha stop,reject
+अरे good morning कृपया,greet
+Mere clim me kaunsa kagaz kam hai,missing_docs
+khanakaise banaye,unknown
+update my season to रबी,correct_season
+Kaunsa docuument missing hai,missing_docs
+Oncee more please,repeat
+haan,approve
+cancel karo,reject
+tell me my claim status please,check_status
+मुझे कॉल करवाइए,book_help
+i approve,approve
+match kaun jeeta,unknown
+pllease namaste ji na,greet
+Sir what is two plus two कृपया,unknown
+जी mera number K R B 2 0 2 6 9 8 1 1 2 hai sttatus bata do,check_status
+सुनिए new insurance application for maize please,apply_insurance
+umm kkharif के लिए बीमा चाहिए,apply_insurance
+what is the weather today jaldi,unknown
+say that again,repeat
+na,reject
+नमस्ते जी,greet
+tll me a joke,unknown
+कौन सा डॉक्यूमेंट मिसिंग है,missing_docs
+हैलो,greet
+caancel,reject
+ji please repeat,repeat
+नहं रुको,reject
+sahayaat chahiye,book_help
+Sir प्याज का भाव क्या है jaldi,unknown
+i want to insure my maize crop,apply_insurance
+the record has th ewrong season,correct_season
+How do i registe rfor fasal bima,apply_insurance
+speak again slowly,repeat
+haan नहीं,reject
+जी submit te missing document,upload_doc
+Land record upload karo,upload_doc
+सही है कर दीजिए,approve
+which documents are missing,missing_docs
+भुगतान हुआ या नहीं,check_status
+नमस्ते,greet
+siir new policy chahiye,apply_insurance
+land record upload karo,upload_doc
+umm mat karo jaldi,reject
+tell me the msising documents,missing_docs
+hi,greet
+I approve,approve
+sir speak again slowly,repeat
+नमस्कार,greet
+okay proceed कृपया,approve
+bia kaise milega,apply_insurance
+acha हैलो,greet
+bhai ट्रेन का टिकट बुक करो,unknown
+why is my claim stuck on documents,missing_docs
+okay proceed na,approve
+hi,greet
+payment hua kya,check_status
+acha yes go ahead,approve
+mat karo please,reject
+मुझे फसल बीमा के लिए आवेदन करना है,apply_insurance
+paymenthua kya,check_status
+i want to apply for crop insurance,apply_insurance
+who won the cricket match कृपया,unknown
+bhai kya kagaz baaki hai,missing_docs
+haan,approve
+Haan upload my land record जी,upload_doc
+No,reject
+hi,greet
+मेरे पास कागज़ है जमा कर दीजिए,upload_doc
+Umm madad chahiye,book_help
+अरे kisi insaan se baat karao,book_help
+Talk to an officer,book_help
+the record has the wrong season ji,correct_season
+सीज़न गलतत है जायद होना चाहिए,correct_season
+Record me season galat hai,correct_season
+new policy chahiye bhai,apply_insurance
+Kya bolaplease,repeat
+zara yes,approve
+what documents are required for KRB2026-36670,missing_docs
+wrong season in my application bhai,correct_season
+zara सुप्रभात,greet
+सनुिए stop,reject
+good morning,greet
+मुझे फसल बीमा के लिए आवेदन करना है na,apply_insurance
+दोबारा बताइए,repeat
+good mornnig,greet
+Bhai aaj mausam kaisa  hai,unknown
+zara book an aappointment for help जी,book_help
+fasal bima ke liye apply karna hai,apply_insurance
+acha अभी नहीं bhai,reject
+record me season galat hai,correct_season
+upload my landr ecord कृपया,upload_doc
+haan what is the weathre today,unknown
+मेरा आवेदन नंबर K R B 2 0 2 6 4 5 0 1 5 है thank you,check_status
+भूमि रिकॉर्ड अपलोड करो,upload_doc
+please do not change naything na,reject
+मुझे मदद चाहहिए,book_help
+जायद के िए बीमा चाहिए,apply_insurance
+nahi,reject
+phir se bolo,repeat
+गेहूं का बीमा करवाना है,apply_insurance
+Acha my  phone is broken जी,unknown
+आवेदन krb-2026-74127 के लिए कौन से दस्तावेज़ चाहिए कृपया,missing_docs
+सुनिए मेरा आवेदन नंबर K R B 2 0 2 6 9 8 4 3 0 है,check_status
+sahayata  chahiye,book_help
+क्य कहा,repeat
+Acha application krb-2026-35697 ka kya hua,check_status
+राम ाम,greet
+सही है कर दीजिए,approve
+सही है कर दीजिए,approve
+हेल्पलाइन से बात करनी है,book_help
+सहायता चाहिए,book_help
+गाना चलाओ कृपया,unknown
+kisi insaan se baat karao,book_help
+सुनिए मेरे पास कागज़ है जमा कर दीजिए,upload_doc
+mera claim pass hua kya जी,check_status
+bhai sugarcane ka bima karna hai कृपया,apply_insurance
+pranam,greet
+i hhave the papers now,upload_doc
+ji मैच किसने जीता ji,unknown
+सीज़न गल है जायद होना चाहिए,correct_season
+सीज़न गलत है जायद होना  चाहिए bhai,correct_season
+zara madad chahiye,book_help
+सुप्रभात,greet
+Umm has my insurance claim been approved,check_status
+नमस्कार,greet
+सीज़न सही कर दीजिए,correct_season
+i want to apply for crop insurance,apply_insurance
+ना,reject
+haan,approve
+what did you say,repeat
+नहीं रुको ji,reject
+please document upload karna hai ji,upload_doc
+cancel  karo jaldi,reject
+haan गनना ka bima karna hai,apply_insurance
+कौन सा डॉक्यूमेंट मिसिंगह ै,missing_docs
+how to apply for pmfby,apply_insurance
+do i need t give any more papers,missing_docs
+कौन सा डॉक्यूमेंट मिसिंग है जी,missing_docs
+Kya kagaz baaki hai,missing_docs
+सुनिए i have the papers now,upload_doc
+bhai namaskar,greet
+claim status for KRB-2026-15906,check_status
+दोबारा ताइए,repeat
+umm my crop was sown in rrabi not kharif,correct_season
+एक बार और बोलिए,repeat
+अरेcorrect go ahead,approve
+wheat kharif 2026 me boya tha kharif nahi please,correct_season
+season galat hai fix it,correct_season
+अेर come again,repeat
+hey there,greet
+मुझे मदद चाहिए,book_help
+why  is my claim stuck on documents,missing_docs
+mere claim me kaunsa kagaz kam hai जी,missing_docs
+आवेदन krb 2026 62236 के लिए कौन से दस्तावेज़ चाहिए,missing_docs
+क्या कहा,repeat
+मुझे कॉल करवाइए bhai,book_help
+कागज़ात में क्या कमी है,missing_docs
+Mere paas document hai bhej do,upload_doc
+Please repeat thank you,repeat
+सुनिए what paers do i need to submit,missing_docs
+Upload the document for krb 2026 83614 na,upload_doc
+ruko mat badlo thank you,reject
+the seaso is wrong it should be रबी 2026-27 ji,correct_season
+zara okay proceed,approve
+yes,approve
+sir ठीक है,approve
+aaj mausam kaisa hai,unknown
+i have the papers now jaldi,upload_doc
+Kaun se documents chahye,missing_docs
+मंंज़ूर है,approve
+bhai season galat hai रबी karo,correct_season
+samajh nahi aaya bhai,repeat
+has the payment come for my गन्ना crop जी,check_status
+ना bhai,reject
+send my papers,upload_doc
+Acha connect me to a person,book_help
+payment hua kya,check_status
+gaana chalao,unknown
+application K R B 2 0 2 6 9 6 8 3 2 ka kya hua,check_status
+not now,reject
+reepeat,repeat
+आज मौसम कैसा है,unknown
+sir speak again slowly,repeat
+namaskar,greet
+Ha ji,approve
+दोबारा बताइए,repeat
+Khatauni jama karni hai,upload_doc
+रद्द करो,reject
+change season to zaid 2027,correct_season
+मेरे क्लेम का स्टेटस क्या है,check_status
+अरे i want to speak to soomeone please,book_help
+हेल्पलाइन से बात करनी है,book_help
+ji हेल्पलाइन से बात करनी है,book_help
+कागज़ात में क्या कमी है ji,missing_docs
+pranam,greet
+is my monney credited,check_status
+नमस्कार,greet
+What papers do i need to submit,missing_docs
+play a song,unknown
+मेरी फफसल kharif 2026 की थी,correct_season
+check my claim status K R B 2 0 2 6 6 0 5 1 3,check_status
+hi,greet
+how to applyfor pmfby कृपया,apply_insurance
+zara cotton तो rabi 2026-27 में बोया था,correct_season
+हाँ आग ेबढ़ो जी,approve
+I did not hear,repeat
+Sir help book aro,book_help
+जी  season galat hai fix it,correct_season
+कागज़ात में क्या कमी है,missing_docs
+Please repeat जी,repeat
+com again,repeat
+kisi insaan seb aat karao,book_help
+season galat hai fix it,correct_season
+cancel it,reject
+Khatauni jama karni hai thank you,upload_doc
+Help book karo,book_help
+samjah nahi aaya,repeat
+सुनिए faal bima ke liye apply karna hai,apply_insurance
+New insuarnce application for mustard,apply_insurance
+i want to upload a document,upload_doc
+नहीं,reject
+Umm ठीक है,approve
+has my insurance claim beeen approved,check_status
+kar do,approve
+अरे i have the khatauni let me upload it,upload_doc
+bhai आवेदन RKB-2026-96384 के लिए कौन से दस्तावेज़ चाहिए ji,missing_docs
+mere claim me kaunsa kagaz kam hai,missing_docs
+hello,greet
+i want o speak to someone,book_help
+send mmy papers कृपया,upload_doc
+train ticket book karo,unknown
+हा ंकर दो,approve
+book an appointment for help thank you,book_help
+Good morning jaldi,greet
+कौन सा दस्तावेज़ बाकी है,missing_docs
+naya bima karwana hai,apply_insurance
+talk to an officer कृपया,book_help
+seeason galat hai fix it,correct_season
+Bookk an appointment for help,book_help
+अभी हीं,reject
+papers submit karne hain,upload_doc
+how to apply for pmfby,apply_insurance
+ji हैलो,greet
+What time is it na,unknown
+Wrong season in my application,correct_season
+ok do it,approve
+ok doo it,approve
+mere claim me kaunsa kagaz kam hai,missing_docs
+कय्ा कहा,repeat
+the season is wrong it shouuld be kharif 2026 jaldi,correct_season
+जी i want to upload a document,upload_doc
+book a call with an agent,book_help
+गाना चलाओ,unknown
+not now,reject
+Bhai who won the cricket match,unknown
+kisi officer se baat karni hai कृपया,book_help
+mere claim me kaunsa kagaz kam hai,missing_docs
+hello na,greet
+hey htere,greet
+अरे मुझे मदद चाहहिए,book_help
+okay proceed,approve
+सुनिए abhi naahi,reject
+सीज़न सही कर दीजिए,correct_season
+Gaana hcalao,unknown
+please मत करो,reject
+कपास ka bima kara hai,apply_insurance
+hello ji,greet
+bima kaise milega,apply_insurance
+bhai paisa aaya ki nahi,check_status
+गाना चलाओ,unknown
+sir kya kagaz baaki hai कृपया,missing_docs
+Ruko mat badlo,reject
+प्रणाम jaldi,greet
+आवेदन k r b 2 0  2 6 7 3 8 0 7 के लिए कौन से दस्तावेज़ चाहिए,missing_docs
+no that is wrong,reject
+zara call me back please,book_help
+What papers do i need to submit,missing_docs
+hello thankyou,greet
+pyaaz ka bhav kya hai,unknown
+Prana जी,greet
+ha ji ji,approve
+where is my calim,check_status
+मिलने का सय बुक करो please,book_help
+papers submit kare hain,upload_doc
+ji hi,greet
+kaun se documents chahiye na,missing_docs
+Claim sstatus for krb 2026 29817,check_status
+kaunsa document missing hai,missing_docs
+dobara batao,repeat
+ji नहीं,reject
+सीज़न गलत है rabi होना चाहिए,correct_season
+रिकॉर्ड में सीज़न  गलत लिखा है,correct_season
+मेरा आवेदन नंबर KRB-2026-57080 है,check_status
+seaso ngalat hai rabi karo,correct_season
+What documents are required for krb-2026-10739,missing_docs
+मुझे मदद चाहिए,book_help
+what time is it,unknown
+speak again slowly,repeat
+haan,approve
+अरे हाँ thank you,approve
+what did you say,repeat
+सीज़न गलत है खरीफ होना चााहिए,correct_season
+Aaj mausam kaisa hai,unknown
+प्याज का भाव क्या है,unknown
+claim kahantak pahuncha,check_status
+Change season to zaid 2027,correct_season
+tell me a joke,unknown
+अरे nahi rehne do,reject
+खाना कैसे बनाएं,unknown
+K R B 2 0 2 6 2 7 7 7 2 ke liye kya documents lagenge,missing_docs
+Caim kahan tak pahuncha,check_status
+kya bola,repeat
+acha joke sunao,unknown
+Bhai document upload karna hai,upload_doc
+Bhai comee again,repeat
+Upload the document for k r b 2 0 2 6 0 4 1 4 1,upload_doc
+haan sahi hai,approve
+bhai प्याज का भाव क्या है thank yyou,unknown
+सुनिए book an appointment for help,book_help
+haan दोबारा बताइए,repeat
+जी कौन सा दस्तावेज़ बाकी है na,missing_docs
+नया बीमा करवाना है,apply_insurance
+how to apply forr pmfby,apply_insurance
+claim ka status batao KR B 2 0 2 6 8 1 4 1 6,check_status
+God evening,greet
+मुझे फसल बीमा के लिए आवेदन करना है,apply_insurance
+मुझे कॉलक रवाइए,book_help
+दोबारा बताइए,repeat
+enroll me in crop insurance for kharif,apply_insurance
+bhai no,reject
+कौन से काजग़ जमा करने हैं jaldi,missing_docs
+no that s wrong,reject
+क्या कहा bhai,repeat
+mera claim  pass hua kya,check_status
+i want to insure my धान crop,apply_insurance
+acha sahayata chahiye,book_help
+naya bima karwana hai,apply_insurance
+Haan seaason galat hai fix it,correct_season
+record me season galat hai कृपया,correct_season
+My गन्ना was a खरीफ crop,correct_season
+धान की फसल का क्लेम कहाँ है,check_status
+मेरी फसलk harif की थी,correct_season
+गाना चलाओ,unknown
+मौसम बदलकर जायद करो,correct_season
+सीज़न सही कर दीजिए jaldi,correct_season
+Hllo ji,greet
+hey there,greet
+अरे नया बीमा करवाना है,apply_insurance
+ji गाना चलाओ,unknown
+zara कागजात में क्या कमी है na,missing_docs
+sir status of application K R B 2 0 2 6 4 3 4 0 4 jaldi,check_status
+सुनिए where is the nearest hospital,unknown
+भुगतान हुआ या नहीं,check_status
+सीज़न गलत है rabi 2026-277 होना चाहिए,correct_season
+जी speak again slowly कृपया,repeat
+जी haan kar do,approve
+good morning,greet
+kisi officer se baat karin hai,book_help
+please कागज़ात में क्या कमी है,missing_docs
+Sesaon theek kar do,correct_season
+season badal do kharif thank  you,correct_season
+Which documents are missing,missing_docs
+Umm say that again,repeat
+अरे गाना चलाओ कृपया,unknown
+dobara btao,repeat
+ट्रेन का  टिकट बुक करो,unknown
+Please repeat,repeat
+फसल बीा कैसे लें,apply_insurance
+Change season to zaid 2027,correct_season
+Ji खतौनी जमा करनी है,upload_doc
+नया बीमा करवाना है,apply_insurance
+zara naya bima karwana hai,apply_insurance
+please hey there कृपया,greet
+Namaskar,greet
+correct go ahead,approve
+bhai hey there,greet
+आवेदन K R B 2 0 2 6 0 7 3 2 8 के लिए कौन से दस्तावेज़ चाहिए,missing_docs
+Ji what papers do i need t osubmit,missing_docs
+मेरा आवेदन नंबरर KRB-2026-03794 है,check_status
+गेहूं का बीमा करवाना है,apply_insurance
+hlelo,greet
+जी what time is it jaldi,unknown
+Ji फिर से बोलो ji,repeat
+kisi insaan se baat karao please,book_help
+धान zaid 2027 me boya tha kharif nahi,correct_season
+document pending kya hai,missing_docs
+status of application krb 2026 86363 thank you,check_status
+Attach my document thank you,upload_doc
+bhai namaste ji,greet
+Hey there,greet
+Trainticket book karo,unknown
+खाना कैसे बनाएं,unknown
+acha season galat hai रबी 2026-27 karo,correct_season
+मौसम बदलकर kharif करो,correct_season
+किसी इंसान से बात कराओ,book_help
+acha asdf qwer,unknown
+Upload the document for krb-2026-44658,upload_doc
+नया बीमा करवाना है,apply_insurance
+सहहायता चाहिए,book_help
+अभी नहीं,reject
+abhi nahi,reject
+गन्ना की फसल का क्लेम कहाँ है,check_status
+No dont do it,reject
+repeat,repeat
+mere claim e kaunsa kagaz kam hai,missing_docs
+claim kahan tak pahuncha,check_status
+my phone is broken bhai,unknown
+please aaj mausam kaisa hai,unknown
+Khana kaise banaye,unknown
+Papers ubmit karne hain,upload_doc
+yes please जी,approve
+कौन से कागज़ जमा करने हैं,missing_docs
+abhi nahi please,reject
+ना,reject
+Kagaz upload kar do please,upload_doc
+hana ना,reject
+Sir दोबारा बताइए,repeat
+zara theek hai,approve
+claim kahan tak pahuncha,check_status
+Mera claim status kyah ai,check_status
+जी helo is anyone there,greet
+umm kisi officer se baat karni hai,book_help
+namaste ji,greet
+सझ नहीं आया,repeat
+बमीा में नाम लिखवाना है,apply_insurance
+cancel karo,reject
+What did you say जी,repeat
+zara nahi,reject
+अभ नहीं,reject
+i did not heear,repeat
+सहायता चाहिए,book_help
+New policy chahiye,apply_insurance
+haa ji,approve
+Cancel,reject
+how to cook rice,unknown
+abhi nah iजी,reject
+मेरी फसल खरीफ की थी,correct_season
+kagaz upload kar do bhai,upload_doc
+has my insurance claim been approved,check_status
+why is my claim stuck on documents,missing_docs
+नहीं,reject
+अरे कपास zaid 2027 me boya tha kharif nahi,correct_season
+enroll me in crop insurance for rabi,apply_insurance
+the season is wrong it should be rabi 2026-27 jaldi,correct_season
+Pranam,greet
+khatauni jama karin hai,upload_doc
+किसी इंसान से बात कराओ,book_help
+खतौनी जमा करनी है कृपया,upload_doc
+cotton तो जायद में बोया था please,correct_season
+मौसम बदलरक rabi 2026-27 करो ji,correct_season
+aaj mausam kaisa hai,unknown
+Appplication k r b 2 0 2 6 0 5 9 6 5 ka kya hua thank you,check_status
+अरेआ वेदन krb-2026-99193 के लिए कौन से दस्तावेज़ चाहिए na,missing_docs
+Come again,repeat
+zaraa no that is wrong,reject
+zara where is the nearest hospital please,unknown
+धान k bima karna hai,apply_insurance
+good morning,greet
+sugarcane रबी 2026-27 me boya tha kharif nahi,correct_season
+season galat hai fix it जी,correct_season
+मेरे पास कागज़ है जमा कर दीजिए,upload_doc
+the record has the wrng season,correct_season
+mera number KRB-2026-33289 ha istatus bata do,check_status
+सुनिए fasal  bima ke liye apply karna hai jaldi,apply_insurance
+जी हाँ,approve
+yes,approve
+season galat hai fxi it,correct_season
+Acha claimk a status batao krb 2026 82691,check_status
+क्या मेरा पैसा आ गया कृपया,check_status
+wat is the price of onion,unknown
+i want to insure my कपास crop,apply_insurance
+apply kaise karu jaldi,apply_insurance
+सुनिए document upload karna hai,upload_doc
+nhai,reject
+सुनिए season galat hai kharif karo,correct_season
+meri fasal rabi ki thi,correct_season
+my phone is broken,unknown
+manjoor thank you,approve
+कागज़ अपलोड कर दो,upload_doc
+match kaun jeeta,unknown
+Change season to zaid 2027,correct_season
+bhai did i get paid for wheat bhai,check_status
+train ticket book karo,unknown
+सही है कर दीजिए,approve
+okay proceed,approve
+Claim status for krb-2026-19142 thank you,check_status
+Zara repeat,repeat
+मुे फसल बीमा के लिए आवेदन करना है,apply_insurance
+ठीक है,approve
+is my money credited,check_status
+Talk to an officer,book_help
+good evening,greet
+haan रद्द करो,reject
+सही है कर दीजिए,approve
+भूमि िकॉर्ड अपलोड करो,upload_doc
+मंज़ूर है,approve
+zara send ym papers,upload_doc
+season theek kar do thank you,correct_season
+अरे apply kaise  karu,apply_insurance
+yes go aahead,approve
+Canceel it,reject
+सहायता चाहिए bhai,book_help
+attach my document,upload_doc
+good evening,greet
+मैच किसने जीता जी,unknown
+namaste,greet
+send my papers,upload_doc
+सहायता चाहिए,book_help
+ji राम राम,greet
+समझ नहीं आया,repeat
+my crop was sown in रबी not khaarif,correct_season
+what is two plus two,unknown
+क्या कहा,repeat
+why is my claim stuck on documents,missing_docs
+What documentsare required for krb-2026-14790,missing_docs
+Acha send my papers,upload_doc
+Acha who won the cricket match,unknown
+say that again,repeat
+नमस्कार,greet
+kya kagaz baaki hai jaldi,missing_docs
+paisa aaya k inahi,check_status
+जी ood morning na,greet
+application KRB-2026-59459 ka kya hua,check_status
+जी खना कैसे बनाएं na,unknown
+meri fasal रबी ki thi,correct_season
+yes go ahead,approve
+Pyaaz ka bha kya hai,unknown
+tell me the mmissing documents,missing_docs
+Claim ka status batao krb-2026-59460,check_status
+Umm naya bima karwana hai,apply_insurance
+mere paas document hai bhej do,upload_doc
+hi bhai,greet
+नया बीमा करवाना है jaldi,apply_insurance
+Yes tht is right,approve
+bhai document upload karna hai,upload_doc
+haan documentu pload karna hai,upload_doc
+sattus of application K R B 2 0 2 6 1 7 8 9 2,check_status
+Mera claim tatus kya hai,check_status
+my phone is broken,unknown
+Tell me my claim status,check_status
+KRB-2026-72102 ke liye kya documents lagenge,missing_docs
+जी एक बार और बोलिए,repeat
+नमस्ते,greet
+kaun se documents chahiiye,missing_docs
+yes,approve
+क्या कहा,repeat
+kisi officer se baat karnni hai,book_help
+upload my land record,upload_doc
+apply kaise karu,apply_insurance
+बमा में नाम लिखवाना है,apply_insurance
+reeat,repeat
+umm abhi nnahi na,reject
+haan approve please,approve
+upload my land record,upload_doc
+रिकॉर्ड में सीज़न गलत लिखा है,correct_season
+Land record upload karo jaldi,upload_doc
+kisi insaan se baat karao,book_help
+hello,greet
+सुप्रभभात,greet
+i have the khatauni let me upload it,upload_doc
+i ahve the khatauni let me upload it,upload_doc
+haan khana kise banaye,unknown
+bima ka paisa kab milega,check_status
+ek baar aur,repeat
+call me back pleease,book_help
+नमस्कार,greet
+जी मेरे क्लेम में कौन सा कागज़ कम है,missing_docs
+कागज़ात में क्या कमी है,missing_docs
+haan reject,reject
+सुनिए मेरे क्लेम का स्टेटस क्या है,check_status
+kya kagaz baaki hai thank you,missing_docs
+how do i regisetr for fasal bima,apply_insurance
+जी  हाँ,approve
+speak again slowly,repeat
+umm ैहलो,greet
+क्ललेम मंजूर हुआ या नहीं जी,check_status
+document pending kya hai,missing_docs
+bhai kaun se documents chahiye jaldi,missing_docs
+अरेs ugarcane खरीफ me boya tha kharif nahi,correct_season
+Ji कागज़ात में क्या कमी है,missing_docs
+Umm asdf qwer,unknown
+सुनिए joke sunao,unknown
+सुप्रभात thank you,greet
+हाँ,approve
+सहायता चाहिए,book_help
+Bhai hello ji jaldi,greet
+reeat,repeat
+अरे ruko mat badlo,reject
+Acha मुझे कॉल करवाइए,book_help
+राम राम,greet
+ruko mat badlo ji,reject
+जी हाँ,approve
+update my season to arbi 2026-27,correct_season
+joke sunao,unknown
+haan say that again na,repeat
+अरे help book kaaro,book_help
+Repeat,repeat
+sir haan bhai,approve
+कौन सा डॉक्यूमेंट मिसिंग है,missing_docs
+haan naya bima karwana hai,apply_insurance
+i need help,book_help
+submit the missing document,upload_doc
+जी  हाँ,approve
+my applicaion number is KRB-2026-23600,check_status
+सीज़न गलत है rabiह ोना चाहिए,correct_season
+कागज़ात में क्या कमी है,missing_docs
+Why is my claim stuck on documents,missing_docs
+ठीक है,approve
+reejct,reject
+खान ाकैसे बनाएं,unknown
+सुप्रभात thank ou,greet
+अभभी नहीं,reject
+Ji say that again,repeat
+हेल्पलाइन से बात करनी है,book_help
+where is my claim,check_status
+सुनिए season badal do जायद,correct_season
+sir मुझे फसल बीमा के लिए आवेदन करना है,apply_insurance
+sir nnamaste,greet
+season badal do रबी,correct_season
+pranam,greet
+मं़ूर है,approve
+The record has the wrong season,correct_season
+haan attach my document,upload_doc
+fasal bima ke liye appl karna hai,apply_insurance
+सही है कर दीजिए ji,approve
+please खतौनी जमा करनी है,upload_doc
+रिकॉ्रड में सीज़न गलत लिखा है jaldi,correct_season
+please सुप्रभात,greet
+tell m a joke ji,unknown
+अरे not now thank you,reject
+हैैलो,greet
+change season to रबी 2026-27 thank you,correct_season
+approve bhai,approve
+what did you say,repeat
+Umm ौमसम बदलकर rabi करो,correct_season
+I approve,approve
+yes that is right thnk you,approve
+गाना चलाओ,unknown
+sure,approve
+बीमा में नाम लिखवाना है,apply_insurance
+is any document pending please,missing_docs
+Bhai yse please कृपया,approve
+upload my land ercord,upload_doc
+राम ारम,greet
+sir एक बार और बोलिए,repeat
+has the payment come for my maize crop,check_status
+Sir ek baar aur,repeat
+please wheat zaid 2027 me boya tha kharif nahi जी,correct_season
+not now,reject
+acha upload my land record,upload_doc
+मेरी फसल रबी की थी,correct_season
+please repeat,repeat
+Papers submit karne hain,upload_doc
+जी my phonne is broken,unknown
+my phone is brkoen,unknown
+हैलो,greet
+hi,greet
+Update my season to रबी कृपया,correct_season
+i did not ear,repeat
+papers submit kaarne hain,upload_doc
+सुनिए match kaun jeeta,unknown
+land record upload karo कृपया,upload_doc
+Sir my crop was sown in रबी not kharif,correct_season
+बीमा में ननाम लिखवाना है,apply_insurance
+Bhai रद्द करो,reject
+fasal bima ke liye apply karna hai,apply_insurance
+papers submit karne hain,upload_doc
+play a song jaldi,unknown
+document upload karna hai,upload_doc
+New policy chahiye,apply_insurance
+um mha ji,approve
+send my papers कृपया,upload_doc
+क्याकहा,repeat
+i approve,approve
+namaste ji,greet
+Manjoor,approve
+Acha ram ram जी,greet
+ha ji,approve
+जी call me back please कृपया,book_help
+खाना कैसे बनाएं,unknown
+upload the document for KRB-2026-04087,upload_doc
+haan sahi ahi,approve
+Achaa ttach my document,upload_doc
+सुपर्भात,greet
+please status of application KRB-2026-49015,check_status
+What is the weather oday,unknown
+please corrrect the season to रबी 2026-27,correct_season
+mere paas documenthai bhej do,upload_doc
+fasal bima ke liye apply karna hai,apply_insurance
