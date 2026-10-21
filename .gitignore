@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+# secrets (VERBX_API_KEY etc.) live only here, never committed
+.env
+# SQLite is re-seeded on every startup
+*.db
