@@ -54,6 +54,7 @@ function select(id) {
   $('checks').innerHTML = r.checks.map(c => `<div>${c.ok ? '✅' : '❌'} ${esc(c.label)}</div>`).join('') +
     (r.error ? `<div style="color:var(--red-ink)"><b>Error:</b> ${esc(r.error)}</div>` : '');
   $('evidence').textContent = ['INPUT:', ...r.inputs, '', 'REPLIES:', ...r.actual, '', 'EVIDENCE:', ...r.evidence].join('\n');
+  $('conversation').textContent = (r.messages || []).map(m => m.replace(' -> ', ' → ')).join('\n') || '—';
 }
 
 async function run(ids, btn) {
@@ -80,6 +81,19 @@ async function refreshLive() {
     ? data.entries.map(e => `${fmt(e.ts)} IST  ${e.session_id}  ${e.step.padEnd(12)} ${JSON.stringify(e.data)}`).join('\n')
     : 'No farmer activity yet. Use the farmer app, then press Refresh.';
   $('live').scrollTop = $('live').scrollHeight;
+  const msgs = (await getJSON('/api/agents/messages' + (sid ? `?session_id=${encodeURIComponent(sid)}` : ''))).messages;
+  $('live-agents').textContent = msgs.length
+    ? msgs.map(m => `${fmt(m.ts)} IST  ${m.session_id}  ${m.from} → ${m.to}: ${m.type}  (${m.summary})`).join('\n')
+    : 'No agent messages yet.';
+  $('live-agents').scrollTop = $('live-agents').scrollHeight;
+}
+
+async function loadRoster() {
+  const data = await getJSON('/api/agents');
+  const card = (n, role, handles) => `<div class="card" style="padding:8px 10px"><b>${esc(n)}</b>
+    <div class="small">${esc(role)}</div>${handles ? `<div class="mono" style="font-size:11px;margin-top:4px">${esc(handles.join(' · '))}</div>` : ''}</div>`;
+  $('roster').innerHTML = card(data.orchestrator.name, data.orchestrator.role) +
+    data.agents.map(a => card(a.name, a.role, a.handles)).join('');
 }
 
 $('run-official').onclick = (e) => run(scenarios.filter(s => s.official).map(s => s.id), e.target);
@@ -94,5 +108,5 @@ $('refresh').onclick = refreshLive;
 
 (async () => {
   scenarios = (await getJSON('/api/scenarios')).scenarios;
-  renderTable(); showMode(); refreshLive();
+  renderTable(); showMode(); refreshLive(); loadRoster();
 })();

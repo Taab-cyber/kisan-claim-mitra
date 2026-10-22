@@ -13,7 +13,7 @@ import threading
 import time
 import uuid
 
-from agent import rules, tools, verify
+from agent import rules, tools
 
 PROPOSAL_TTL_SECONDS = 15 * 60
 
@@ -60,7 +60,8 @@ class ApprovalStore:
 
 
 class ActionRunner:
-    """Executes APPROVED proposals exactly once and then verifies them."""
+    """Executes APPROVED proposals exactly once. It does NOT verify its own work:
+    the separate Verifier agent does that (maker-checker)."""
 
     def __init__(self, client, store):
         self.client, self.store = client, store
@@ -70,19 +71,15 @@ class ActionRunner:
         return self._locks.setdefault(pid, threading.Lock())
 
     def run(self, pid, session_id):
-        """Returns the proposal with 'execution' and 'verification' filled in."""
+        """Returns the proposal with 'execution' filled in."""
         p = self.store.get(pid, session_id)
         with self._lock_for(pid):
             if p["status"] not in ("APPROVED", "EXECUTED", "PENDING_CONFIRMATION"):
                 raise ApprovalError(f"cannot execute a proposal in state {p['status']}")
-            if p["status"] == "EXECUTED":                    # retry / double click
+            if p["status"] == "EXECUTED":                    # retry / double click: never re-send
                 p["execution"] = {**p["execution"], "replayed": True}
-                if (p["verification"] or {}).get("status") != "VERIFIED":
-                    p["verification"] = verify.verify(self.client, p)   # check again, never re-send
                 return p
             self._execute_once(p)
-            if p["status"] == "EXECUTED":
-                p["verification"] = verify.verify(self.client, p)
             return p
 
     def _execute_once(self, p):

@@ -168,6 +168,21 @@ def evidence(session_id: Optional[str] = None, limit: int = 300):
     return {"entries": entries[-limit:]}
 
 
+@app.get("/api/agents")
+def agents_roster():
+    """The multi-agent system: orchestrator + specialist agents and what each can be asked."""
+    a = agent()
+    return {"orchestrator": {"name": a.name, "role": a.role}, "agents": a.bus.roster()}
+
+
+@app.get("/api/agents/messages")
+def agent_messages(session_id: Optional[str] = None, limit: int = 300):
+    """The agents' conversation on the message bus (requests and replies)."""
+    bus = agent().bus
+    msgs = bus.for_session(session_id) if session_id else bus.transcript
+    return {"messages": msgs[-limit:]}
+
+
 @app.get("/api/scenarios")
 def scenarios():
     return {"scenarios": [{k: s[k] for k in ("id", "title", "expected", "official")} for s in SCENARIOS]}

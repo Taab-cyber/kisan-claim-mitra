@@ -22,13 +22,22 @@
   <div class="card warn" style="font-size:12.5px">Every row is filled by a <b>real run</b> against the mock portal; any failure is shown, never hidden.
     Running tests <b>resets</b> the mock portal to its seed data.</div>
 
+  <div class="card">
+    <div class="label">Multi-agent system · agents on the message bus</div>
+    <div class="small" style="margin:4px 0 8px">The orchestrator asks specialist agents for help; agents never call each other directly. The action agent never verifies its own work (maker-checker).</div>
+    <div class="grid3 split" id="roster"></div>
+  </div>
+
   <div class="table" id="results" aria-live="polite"></div>
 
   <div class="grid2 split">
     <div class="card"><div class="label" id="tl-title">Action timeline</div><div class="timeline" id="timeline"><span class="small">Click a row after a run.</span></div></div>
     <div class="card"><div class="label">Checks (vs. fresh portal read)</div><div id="checks" style="font-size:12.5px"><span class="small">—</span></div></div>
   </div>
-  <div class="card"><div class="label">Full evidence record (selected case)</div><pre class="evidence" id="evidence">—</pre></div>
+  <div class="grid2 split">
+    <div class="card"><div class="label">Agent conversation (selected case)</div><pre class="evidence" id="conversation">—</pre></div>
+    <div class="card"><div class="label">Full evidence record (selected case)</div><pre class="evidence" id="evidence">—</pre></div>
+  </div>
 
   <div class="card">
     <div class="label">Mock portal controls (for live demos)</div>
@@ -51,6 +60,8 @@
       <div class="controls"><input id="sid" placeholder="filter by session id" style="min-height:44px;border-radius:12px;border:2px solid var(--line);padding:0 10px">
       <button type="button" class="btn" id="refresh">Refresh</button></div></div>
     <pre class="evidence" id="live" style="margin-top:8px">—</pre>
+    <div class="label" style="margin-top:10px">Live agent conversation</div>
+    <pre class="evidence" id="live-agents" style="margin-top:6px">—</pre>
   </div>
   <div class="row small"><span>Secrets and unneeded personal data are never logged (keys like api_key / otp are redacted).</span>
     <b style="color:var(--green-dark)" id="summary"></b></div>

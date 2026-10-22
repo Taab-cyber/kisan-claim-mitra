@@ -206,6 +206,11 @@ def _short_evidence(entries):
     return lines
 
 
+def agent_conversation(messages):
+    """One line per bus message: who asked whom for what (requests and replies)."""
+    return [f"{m['from']} -> {m['to']}: {m['type']}  ({m['summary']})"[:300] for m in messages]
+
+
 def run_scenario(sc, http, timeout=0.5):
     c = Ctx(http, timeout=timeout)
     error = None
@@ -219,7 +224,8 @@ def run_scenario(sc, http, timeout=0.5):
     return {"id": sc["id"], "title": sc["title"], "official": sc["official"],
             "expected": sc["expected"], "inputs": c.inputs, "actual": c.replies,
             "checks": c.checks, "error": error, "passed": passed,
-            "evidence": _short_evidence(c.agent.evidence.for_session(c.sid))}
+            "evidence": _short_evidence(c.agent.evidence.for_session(c.sid)),
+            "messages": agent_conversation(c.agent.bus.for_session(c.sid))}
 
 
 def run_all(http, only=None, timeout=0.5):
