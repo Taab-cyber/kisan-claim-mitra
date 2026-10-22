@@ -6,3 +6,5 @@ __pycache__/
 .env
 # SQLite is re-seeded on every startup
 *.db
+.vercel
+.env*

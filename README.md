@@ -43,9 +43,23 @@ docker build -t kisan-claim-mitra .
 docker run -p 7860:7860 kisan-claim-mitra     # http://localhost:7860
 ```
 
-**Free deploy (Hugging Face Spaces):** create a new Space and choose **Docker** as the SDK. Push
-this repo to it. The header at the top of this README already sets `sdk: docker` and
-`app_port: 7860`. The same Dockerfile also works on **Render** (free web service, Docker runtime).
+**Live demo (Vercel, free Hobby plan): https://kisan-claim-mitra.vercel.app**
+(judge console: https://kisan-claim-mitra.vercel.app/console.html)
+
+Deploy your own copy:
+```bash
+npx vercel login                      # approve the device code in your browser
+npx vercel link --yes --project kisan-claim-mitra
+npx vercel deploy --prod
+```
+Vercel auto-detects FastAPI (`server.py` → `app`) and uses Python 3.12 (`.python-version`).
+`.vercelignore` keeps tests, Docker files and the design mockup out of the bundle. On Vercel
+(`VERCEL=1`) the server runs in **serverless mode**: the agent calls the mock portal
+**in-process** (no fixed port), everything initialises when the module is imported, and the
+trained model and sample images are shipped with the code (the disk is read-only).
+
+**Docker:** the same app runs anywhere with Docker (for example Render's free web service).
+Hugging Face Docker Spaces are no longer free on our account, so we used Vercel instead.
 The SQLite data is re-seeded on every start.
 
 **Tests:**
@@ -232,6 +246,11 @@ Start at `/`, choose **हिन्दी**, and press **Start**. Keep `/console
   may sound robotic, or be missing on some systems (the text is always shown).
 - Sessions, proposals and the evidence log live **in memory**, so they reset when the server
   restarts. `TEST_EVIDENCE.md` is the saved record.
+- **On Vercel (serverless)**, memory belongs to one function instance. An idle site starts
+  fresh (re-seeded portal, new sessions), and under heavy parallel traffic two requests of
+  one conversation could land on different instances. Then the second request gets a clear
+  "proposal not found" or "unknown session" error, never a wrong change. In our live tests
+  8/8 propose-then-approve flows and all 13 scenarios passed.
 - The server is single-instance. Accounts and logins reset on restart. The claim agent does not
   yet use the farmer's uploaded profile documents (it uploads a synthetic sample reference to
   the portal).

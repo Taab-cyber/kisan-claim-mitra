@@ -11,3 +11,6 @@ Kisan Claim Mitra Mockup.html
 Dockerfile
 run.sh
 deploy_hf.sh
+.env.local
+.env*
+.vercel/
