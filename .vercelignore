@@ -1,0 +1,13 @@
+.venv/
+.git/
+.claude/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.db
+.env
+tests/
+Kisan Claim Mitra Mockup.html
+Dockerfile
+run.sh
+deploy_hf.sh

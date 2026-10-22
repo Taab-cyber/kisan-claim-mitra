@@ -4,6 +4,10 @@ Run:  uvicorn server:app --port 8000      then open http://localhost:8000
 
 The mock portal is mounted at /portal. The agent talks to it over HTTP, exactly
 as it would talk to a real external portal.
+
+On Vercel (serverless, env VERCEL=1) there is no fixed port and memory lives per
+instance, so the agent calls the portal IN-PROCESS (same instance, same database)
+and everything is initialised when the module is imported.
 """
 import os
 from contextlib import asynccontextmanager
@@ -29,6 +33,7 @@ voice.load_env_file()   # reads the gitignored .env (VOICE_PROVIDER, VERBX_API_K
 PORT = int(os.getenv("PORT", "8000"))
 PORTAL_URL = os.getenv("PORTAL_URL", f"http://127.0.0.1:{PORT}/portal")
 WEB_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "web")
+SERVERLESS = bool(os.getenv("VERCEL"))      # Vercel sets VERCEL=1
 
 STATE = {}
 
@@ -40,12 +45,25 @@ def configure(http):
     farmer_routes.EVIDENCE["log"] = STATE["agent"].evidence   # one shared evidence log
 
 
-@asynccontextmanager
-async def lifespan(app):
+def portal_http():
+    """HTTP client for the mock portal: real HTTP locally, in-process on serverless."""
+    if SERVERLESS:
+        from fastapi.testclient import TestClient
+        return TestClient(portal_app, raise_server_exceptions=False)
+    return httpx.Client(base_url=PORTAL_URL)
+
+
+def init_all():
     db.init_db(os.getenv("PORTAL_DB"))      # mounted apps don't run their own startup
     accounts.init_db()                      # demo farmer + synthetic sample documents
     if "agent" not in STATE:
-        configure(httpx.Client(base_url=PORTAL_URL))
+        configure(portal_http())
+
+
+@asynccontextmanager
+async def lifespan(app):
+    if not (SERVERLESS and "agent" in STATE):   # serverless already initialised on import
+        init_all()
     yield
 
 
@@ -53,6 +71,8 @@ app = FastAPI(title="Kisan Claim Mitra", lifespan=lifespan)
 app.mount("/portal", portal_app)
 app.include_router(farmer_routes.router)
 app.add_exception_handler(accounts.AccountError, farmer_routes.account_error_handler)
+if SERVERLESS:          # a function instance may start without a lifespan event
+    init_all()
 
 
 def agent():

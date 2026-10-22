@@ -12,7 +12,7 @@ fi
 if [ -f .venv/Scripts/python.exe ]; then PY=.venv/Scripts/python.exe; else PY=.venv/bin/python; fi
 
 # 2) dependencies
-"$PY" -m pip install -q -r requirements.txt
+"$PY" -m pip install -q -r requirements-dev.txt
 
 # 3) train our NLU model (only if missing)
 if [ ! -f agent/nlu/model.joblib ]; then

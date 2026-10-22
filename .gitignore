@@ -6,7 +6,3 @@ __pycache__/
 .env
 # SQLite is re-seeded on every startup
 *.db
-# trained model is rebuilt automatically (python -m agent.nlu.train)
-agent/nlu/model.joblib
-# synthetic sample images are generated (python -m farmer.samples / at startup)
-web/samples/
