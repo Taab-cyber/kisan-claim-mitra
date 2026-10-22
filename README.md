@@ -1,13 +1,3 @@
----
-title: Kisan Claim Mitra
-emoji: 🌾
-colorFrom: green
-colorTo: yellow
-sdk: docker
-app_port: 7860
-pinned: false
----
-
 # Kisan Claim Mitra · किसान क्लेम मित्र
 
 A **voice-first crop-insurance claim tracker** for Indian farmers, in Hindi and English. A farmer
@@ -16,7 +6,15 @@ and payment **separately**, names missing documents **exactly**, and fixes a wro
 uploads a document. It changes anything only **after the farmer approves**, then **re-reads the
 portal to verify** the change.
 
-- **Free only:** no API keys, no LLMs, no paid services, no network calls at runtime.
+**Live demo:** https://kisan-claim-mitra.vercel.app · **Judge console:** https://kisan-claim-mitra.vercel.app/console.html
+
+It is a **multi-agent system**: an orchestrator coordinates 7 specialist agents (intake,
+investigator, action, verifier, helpdesk, responder, auditor) that talk only through a message
+bus. The agent that makes a change is never the agent that confirms it (maker-checker).
+The full walkthrough for reviewers is in **[docs/AGENT_PIPELINE.md](docs/AGENT_PIPELINE.md)**.
+
+- **Free only:** no API keys, no LLMs, no paid services; our server makes no outside network calls
+  (voice input uses the browser's own speech service, see section 4).
 - **We built the agent's brain ourselves:** a small intent model trained from scratch with
   scikit-learn on synthetic data.
 - **Synthetic data only:** no real Aadhaar, PAN or bank data. The target is a **mock portal**
@@ -64,34 +62,57 @@ The SQLite data is re-seeded on every start.
 
 **Tests:**
 ```bash
-python -m pytest -q        # 106 tests: rules, NLU, agent safety, scenarios, API, signup/OTP/docs
+python -m pip install -r requirements-dev.txt
+python -m pytest -q        # 113 tests: rules, NLU, agents, safety, scenarios, API, signup/OTP/docs
 python run_tests.py        # TC1-TC4 + 9 failure cases -> TEST_EVIDENCE.md
 ```
 
 ---
 
-## 2. Architecture
+## 2. Architecture: a multi-agent system
 
 ```
-Browser (web/)                         FastAPI server (server.py) - one process
-┌───────────────────────┐   /api/*    ┌──────────────────────────────────────────────┐
-│ index.html  app.js    │ ──────────> │ agent/planner.py   state machine per session │
-│ voice.js  listen()    │             │   ├─ agent/nlu/     OUR trained intent model │
-│           speak()     │             │   ├─ agent/rules.py plain-code decisions     │
-│ console.html (judges) │             │   ├─ agent/approvals.py approval + idempotent│
-└───────────────────────┘             │   ├─ agent/verify.py  re-read after actions  │
-                                      │   ├─ agent/evidence.py audit log             │
-                                      │   └─ agent/tools.py ──HTTP──┐                │
-                                      │                             v                │
-                                      │ /portal  mock insurance portal (portal/)     │
-                                      │          SQLite, seeded at startup           │
-                                      └──────────────────────────────────────────────┘
+ Browser (web/)                FastAPI server (server.py)
+ voice / text / photos  --->   /api/chat, /api/approve
+                                     |
+                                     v
+                       +---------------------------+
+                       |  ORCHESTRATOR (planner.py)|  session memory + state machine
+                       +-------------+-------------+
+                                     |  messages only (agent/bus.py)
+     +-----------+-----------+-------+-------+-----------+-----------+-----------+
+     v           v           v               v           v           v           v
+  intake    investigator   action         verifier    helpdesk    responder    auditor
+  (our NLU)  (portal +     (propose,      (re-reads   (book a     (HI/EN      (evidence
+             rules)        approve,       portal,     call-back)  templates)  log)
+                           execute once)  checks)
+                 |             |              |
+                 +-------------+--------------+--> /portal  mock insurance portal (SQLite)
 ```
 
-**Planner states:** `COLLECT → FETCH → DECIDE → (PROPOSE → AWAIT_APPROVAL → EXECUTE → VERIFY) → RESPOND`.
+| Agent | Owns | Asked to | Code |
+|---|---|---|---|
+| **orchestrator** | per-session memory, the state machine | decide the next step | `agent/planner.py` |
+| **intake** | our trained intent model + entity rules | `understand` | `agent/agents.py` → `agent/nlu/` |
+| **investigator** | portal read tool + business rules | `investigate` | `agent/agents.py` → `tools.fetch_claim`, `rules.py` |
+| **action** | proposals, approvals, the executor | `propose`, `lookup`, `decide`, `cancel`, `execute`, `attach_verification` | `agent/agents.py` → `approvals.py` |
+| **verifier** | an independent portal re-read | `verify` | `agent/agents.py` → `verify.py` |
+| **helpdesk** | help bookings | `book` | `agent/agents.py` → `tools.book_help` |
+| **responder** | Hindi/English reply templates | `compose` | `agent/agents.py` → `replies.py` |
+| **auditor** | the evidence log | `record` | `agent/agents.py` → `evidence.py` |
+
+- **Agents never call each other directly.** Every request and reply is a message on the bus,
+  and you can see the whole conversation. The judge console's "Agent conversation" panel and
+  each case in `TEST_EVIDENCE.md` show it.
+- **Maker-checker:** the action agent's executor does **not** verify its own work. The
+  verifier agent re-reads the portal on its own and compares it with the intended change.
+- **Deterministic and auditable:** the trained model only decides *what the farmer wants*.
+  Which agent acts, what is allowed and what is said is plain code, logged by the auditor.
+
+**Orchestrator states:** `COLLECT → FETCH → DECIDE → (PROPOSE → AWAIT_APPROVAL → EXECUTE → VERIFY) → RESPOND`.
 Every reply returns its `trace`, so you can see which states ran.
 
-| Part | What it does |
+| Module | What it does |
 |---|---|
 | `portal/` | Mock portal. `GET /claims/{app_no}`, `POST .../season`, `POST .../documents`. Every change raises `record_version`. Supports `expected_version` (refuse stale changes) and `idempotency_key` (a repeated request is applied once). A failed lookup returns 404 `not_found`, which is different from 503 `portal_down`. Modes: `normal`, `down`, `slow`, `slow_writes`, `drop_writes`. `/simulate/credit/{app_no}` marks money as paid. |
 | `agent/nlu/` | Our trained intent model, plus rule-based entities (application number, season, crop). |
@@ -204,12 +225,12 @@ Start at `/`, choose **हिन्दी**, and press **Start**. Keep `/console
 
 | Time | Do / say | What to point out |
 |---|---|---|
-| 0:00 | Intro: "Voice-first claim tracker. Own trained NLU, no LLM, no API keys." | Language screen, bilingual labels |
+| 0:00 | Intro: "Voice-first claim tracker. A multi-agent system: an orchestrator and 7 specialist agents. Own trained NLU, no LLM, no API keys." | Language screen, bilingual labels |
 | 0:20 | **TC1:** tap the mic and say *"मेरे क्लेम का स्टेटस बताओ"*. The agent asks for the number. Say *"KRB-2026-00417"*. | Asks before guessing. Status screen shows **Under review**, Kharif 2026, Paddy, with source and IST fetch time. |
 | 0:50 | **TC2:** type *"आवेदन KRB-2026-00521 में कौन सा कागज़ बाकी है"* | Red card shows **Land Record (Khatauni)**, the exact portal string. **Upload it** opens the approval screen ("not done yet"). **Approve** gives a result marked **VERIFIED** with expected and observed values. |
 | 1:30 | **TC3:** say *"mera rabi 2026-27 ka claim KRB-2026-00633 ka status batao"* | "You asked Rabi 2026-27 / Portal shows Kharif 2026". Say **"haan kar do"** and it is VERIFIED by a fresh read. (The double-click case is shown in the console as **F5**.) |
 | 2:00 | **TC4:** switch to EN and type *"has my money come for KRB-2026-00748"* | **Approved** (green) and **Not credited** (amber) cards: "Approved does not mean paid". In the console, press **Simulate credit** and ask again: now it says paid. |
-| 2:25 | **Console:** press **Run all 4 tests**, then **Run failure cases** | 13 real runs. Click **F6** to see the timeout, the portal checked before any retry, and a single write. Click **F7** to see `drop_writes` caught as **FAILED**. Show the live evidence log. |
+| 2:25 | **Console:** press **Run all 4 tests**, then **Run failure cases** | 13 real runs. Show the **agents on the message bus** and click **TC3** to see their conversation (intake → investigator → action → verifier). Click **F6** to see the timeout, the portal checked before any retry, and a single write. Click **F7** to see `drop_writes` caught as **FAILED**. Show the live evidence log. |
 | (extra) | Welcome → **Log in with OTP** → 9876543210 → type the code from the Demo SMS. Tap the red banner, then upload **Bank passbook - BLURRY** from 🧪 Demo file, then the clear one. | OTP typed by the farmer; blurry photo flagged NEEDS_FIX, then fixed to PASSED |
 | 2:50 | Close | Approval is enforced by the server, no duplicate actions, approved is never confused with paid, UNCERTAIN instead of guessing. |
 
@@ -263,12 +284,14 @@ Start at `/`, choose **हिन्दी**, and press **Start**. Keep `/console
 ```
 portal/      mock insurance portal (FastAPI, SQLite, seed data, failure modes)
 farmer/      accounts (signup, mock OTP, profile), doccheck (OpenCV), samples, routes
-agent/       nlu/ (gen_data, train, entities, predict), tools, planner, rules,
+agent/       planner (orchestrator), agents (7 specialists), bus (message bus),
+             nlu/ (gen_data, train, entities, predict), tools, rules,
              approvals, verify, evidence, replies, scenarios, voice
 web/         index.html, app.js, account.js, voice.js, styles.css, console.*, samples/
-tests/       pytest: portal, nlu, rules, agent safety, scenarios, api, farmer
+tests/       pytest: portal, nlu, rules, agent safety, multi-agent, scenarios, api, farmer
 server.py    main app       run_tests.py -> TEST_EVIDENCE.md
-PLAN.md      plan           Dockerfile, run.sh
+PLAN.md      plan           docs/AGENT_PIPELINE.md (interview walkthrough)
+Dockerfile, run.sh, requirements-dev.txt (adds pytest)
 ```
 
 All claims, names and documents in this project are **synthetic**. Never enter real Aadhaar,

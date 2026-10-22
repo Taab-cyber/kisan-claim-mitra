@@ -31,7 +31,10 @@ Planner states: COLLECT -> FETCH -> DECIDE -> (PROPOSE -> AWAIT_APPROVAL -> EXEC
    - provider `verbx` via env `VOICE_PROVIDER`, key `VERBX_API_KEY` only in gitignored `.env`,
      used server-side only. **Stub until API docs arrive.** Any VerbX error/timeout -> automatic
      fallback to browser + small notice. Everything must pass with `VOICE_PROVIDER=browser`.
-6. **Deploy + docs** — Dockerfile, `run.sh`, Hugging Face Spaces (Docker) free tier, README, demo script.
+6. **Deploy + docs** — Dockerfile, `run.sh`, README, demo script. Deployed on **Vercel** (free Hobby plan,
+   serverless mode) because Hugging Face Docker Spaces are no longer free on our account.
+7. **Multi-agent** — the planner became an orchestrator + 7 specialist agents on a message bus
+   (same behaviour, all tests unchanged; verifier separated from executor = maker-checker).
 
 Stretch (only after DoD): signup, mock OTP shown in UI, synthetic doc checks (type/size, blur via OpenCV).
 Optional later: Supabase as an extra copy of the evidence log only (off by default; SQLite stays the portal DB).
