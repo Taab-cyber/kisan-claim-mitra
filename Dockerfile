@@ -13,7 +13,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 # Train our own NLU model at build time (synthetic data, ~5 seconds, no downloads).
-RUN python -m agent.nlu.gen_data && python -m agent.nlu.train
+RUN python -m agent.nlu.gen_data && python -m agent.nlu.train && python -m farmer.samples
 
 # Hugging Face Spaces runs containers as user 1000.
 RUN useradd -m -u 1000 user && chown -R user /app

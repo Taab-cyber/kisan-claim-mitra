@@ -8,3 +8,5 @@ __pycache__/
 *.db
 # trained model is rebuilt automatically (python -m agent.nlu.train)
 agent/nlu/model.joblib
+# synthetic sample images are generated (python -m farmer.samples / at startup)
+web/samples/
